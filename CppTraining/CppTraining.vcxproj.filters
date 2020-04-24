@@ -42,6 +42,9 @@
     <ClCompile Include="Ch12\Task1\ex_1.cpp">
       <Filter>Ch12\Task1</Filter>
     </ClCompile>
+    <ClCompile Include="Stroustruap_libs\Simple_window.cpp">
+      <Filter>Stroustruap_libs</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Stroustruap_libs\Graph.h">

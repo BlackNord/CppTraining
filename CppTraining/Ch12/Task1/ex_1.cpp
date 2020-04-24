@@ -7,17 +7,17 @@ using namespace std;
 void ex_1() {
 	Simple_window win{ Point {50, 50 }, 1000, 1000, "Ex_1" };
 
-	Rectangle rec{ Point{200, 200}, 100, 50 };
-	rec.set_color(Color::blue);
+	Graph_lib::Rectangle rec{ Point{200, 200}, 100, 50 };
+	rec.set_color(Graph_lib::Color::blue);
 
 	win.attach(rec);
 
-	Polygon pol;
+	Graph_lib::Polygon pol;
 	pol.add(Point{ 400, 400 });
 	pol.add(Point{ 400, 500 });
 	pol.add(Point{ 350, 500 });
 	pol.add(Point{ 350, 400 });
-	pol.set_color(Color::red);
+	pol.set_color(Graph_lib::Color::red);
 
 	win.attach(pol);
 
