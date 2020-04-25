@@ -5,7 +5,7 @@
 using namespace std;
 
 void ex_1() {
-	Simple_window win{ Point {50, 50 }, 1000, 1000, "Ex_1" };
+	Simple_window win{ Point {50, 50 }, 600, 600, "Ex_1" };
 
 	Graph_lib::Rectangle rec{ Point{200, 200}, 100, 50 };
 	rec.set_color(Graph_lib::Color::blue);

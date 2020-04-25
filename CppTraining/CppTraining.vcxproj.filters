@@ -25,6 +25,12 @@
     <Filter Include="Ch12\Task1">
       <UniqueIdentifier>{1c38479c-c70d-426c-b73a-a0f1dfca9de0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Ch12\Task2">
+      <UniqueIdentifier>{4e078514-0e53-47ff-acb7-a172f1c770da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ch12\Task3">
+      <UniqueIdentifier>{675f557b-3054-4f25-96fc-5566684fe63e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Stroustruap_libs\Graph.cpp">
@@ -44,6 +50,12 @@
     </ClCompile>
     <ClCompile Include="Stroustruap_libs\Simple_window.cpp">
       <Filter>Stroustruap_libs</Filter>
+    </ClCompile>
+    <ClCompile Include="Ch12\Task2\ex_2.cpp">
+      <Filter>Ch12\Task2</Filter>
+    </ClCompile>
+    <ClCompile Include="Ch12\Task3\ex_3.cpp">
+      <Filter>Ch12\Task3</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -67,6 +79,12 @@
     </ClInclude>
     <ClInclude Include="Ch12\Task1\ex_1.h">
       <Filter>Ch12\Task1</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch12\Task2\ex_2.h">
+      <Filter>Ch12\Task2</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch12\Task3\ex_3.h">
+      <Filter>Ch12\Task3</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
