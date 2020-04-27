@@ -156,24 +156,45 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="App\main.cpp" />
+    <ClCompile Include="Ch12\Task10\ex_10.cpp" />
+    <ClCompile Include="Ch12\Task11\ex_11.cpp" />
+    <ClCompile Include="Ch12\Task12-13\ex_12_13.cpp" />
     <ClCompile Include="Ch12\Task1\ex_1.cpp" />
     <ClCompile Include="Ch12\Task2\ex_2.cpp" />
     <ClCompile Include="Ch12\Task3\ex_3.cpp" />
+    <ClCompile Include="Ch12\Task4\ex_4.cpp" />
+    <ClCompile Include="Ch12\Task5\ex_5.cpp" />
+    <ClCompile Include="Ch12\Task6\ex_6.cpp" />
+    <ClCompile Include="Ch12\Task7\ex_7.cpp" />
+    <ClCompile Include="Ch12\Task8\ex_8.cpp" />
+    <ClCompile Include="Ch12\Task9\ex_9.cpp" />
     <ClCompile Include="Stroustruap_libs\Graph.cpp" />
     <ClCompile Include="Stroustruap_libs\GUI.cpp" />
     <ClCompile Include="Stroustruap_libs\Simple_window.cpp" />
     <ClCompile Include="Stroustruap_libs\Window.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Ch12\Task10\ex_10.h" />
+    <ClInclude Include="Ch12\Task11\ex_11.h" />
+    <ClInclude Include="Ch12\Task12-13\ex_12_13.h" />
     <ClInclude Include="Ch12\Task1\ex_1.h" />
     <ClInclude Include="Ch12\Task2\ex_2.h" />
     <ClInclude Include="Ch12\Task3\ex_3.h" />
+    <ClInclude Include="Ch12\Task4\ex_4.h" />
+    <ClInclude Include="Ch12\Task5\ex_5.h" />
+    <ClInclude Include="Ch12\Task6\ex_6.h" />
+    <ClInclude Include="Ch12\Task7\ex_7.h" />
+    <ClInclude Include="Ch12\Task8\ex_8.h" />
+    <ClInclude Include="Ch12\Task9\ex_9.h" />
     <ClInclude Include="Stroustruap_libs\Graph.h" />
     <ClInclude Include="Stroustruap_libs\GUI.h" />
     <ClInclude Include="Stroustruap_libs\Point.h" />
     <ClInclude Include="Stroustruap_libs\Simple_window.h" />
     <ClInclude Include="Stroustruap_libs\std_lib_facilities_4.h" />
     <ClInclude Include="Stroustruap_libs\Window.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Resourses\1.jpg" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -31,6 +31,33 @@
     <Filter Include="Ch12\Task3">
       <UniqueIdentifier>{675f557b-3054-4f25-96fc-5566684fe63e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Ch12\Task5">
+      <UniqueIdentifier>{9075ca35-9071-4eab-9ba7-010036a3b493}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ch12\Task4">
+      <UniqueIdentifier>{92abb3cf-cfd5-43ed-9791-7c2819c9fa62}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ch12\Task7">
+      <UniqueIdentifier>{4e44e20b-3058-410a-a105-7eaee510dbae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ch12\Task6">
+      <UniqueIdentifier>{39c576db-1877-4a4b-bf5f-5c101e3a019f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ch12\Task8">
+      <UniqueIdentifier>{a1311391-9741-4bdd-b778-07c59bfa4405}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ch12\Task9">
+      <UniqueIdentifier>{6802d372-391f-41ed-8177-8b6e88397027}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ch12\Task10">
+      <UniqueIdentifier>{7d1e5ecd-3110-4fe4-9520-999fa5855595}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ch12\Task12-13">
+      <UniqueIdentifier>{121dc2ba-32ff-4880-b070-2823f1b55b84}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ch12\Task11">
+      <UniqueIdentifier>{22817b02-bf8b-41c2-9693-70daa4791dfc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Stroustruap_libs\Graph.cpp">
@@ -56,6 +83,33 @@
     </ClCompile>
     <ClCompile Include="Ch12\Task3\ex_3.cpp">
       <Filter>Ch12\Task3</Filter>
+    </ClCompile>
+    <ClCompile Include="Ch12\Task4\ex_4.cpp">
+      <Filter>Ch12\Task4</Filter>
+    </ClCompile>
+    <ClCompile Include="Ch12\Task5\ex_5.cpp">
+      <Filter>Ch12\Task5</Filter>
+    </ClCompile>
+    <ClCompile Include="Ch12\Task6\ex_6.cpp">
+      <Filter>Ch12\Task6</Filter>
+    </ClCompile>
+    <ClCompile Include="Ch12\Task7\ex_7.cpp">
+      <Filter>Ch12\Task7</Filter>
+    </ClCompile>
+    <ClCompile Include="Ch12\Task8\ex_8.cpp">
+      <Filter>Ch12\Task8</Filter>
+    </ClCompile>
+    <ClCompile Include="Ch12\Task9\ex_9.cpp">
+      <Filter>Ch12\Task9</Filter>
+    </ClCompile>
+    <ClCompile Include="Ch12\Task10\ex_10.cpp">
+      <Filter>Ch12\Task10</Filter>
+    </ClCompile>
+    <ClCompile Include="Ch12\Task11\ex_11.cpp">
+      <Filter>Ch12\Task11</Filter>
+    </ClCompile>
+    <ClCompile Include="Ch12\Task12-13\ex_12_13.cpp">
+      <Filter>Ch12\Task12-13</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -86,5 +140,37 @@
     <ClInclude Include="Ch12\Task3\ex_3.h">
       <Filter>Ch12\Task3</Filter>
     </ClInclude>
+    <ClInclude Include="Ch12\Task4\ex_4.h">
+      <Filter>Ch12\Task4</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch12\Task5\ex_5.h">
+      <Filter>Ch12\Task5</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch12\Task6\ex_6.h">
+      <Filter>Ch12\Task6</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch12\Task7\ex_7.h">
+      <Filter>Ch12\Task7</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch12\Task8\ex_8.h">
+      <Filter>Ch12\Task8</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch12\Task9\ex_9.h">
+      <Filter>Ch12\Task9</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch12\Task10\ex_10.h">
+      <Filter>Ch12\Task10</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch12\Task11\ex_11.h">
+      <Filter>Ch12\Task11</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch12\Task12-13\ex_12_13.h">
+      <Filter>Ch12\Task12-13</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Resourses\1.jpg">
+      <Filter>Файлы ресурсов</Filter>
+    </Image>
   </ItemGroup>
 </Project>
