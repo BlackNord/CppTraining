@@ -24,9 +24,9 @@ int main() {
 		//ex_7();
 		//ex_8();
 		//ex_9();
-		ex_10();
+		//ex_10();
 		//ex_11();
-		//ex_12_13();
+		ex_12_13();
 	}
 	catch (const exception & ex) {
 		cout << "Error: " << ex.what() << endl;
