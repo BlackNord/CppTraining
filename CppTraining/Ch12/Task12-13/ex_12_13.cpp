@@ -3,6 +3,7 @@
 #include "../../Stroustruap_libs/Graph.h"
 #include <cmath>
 #include <string_view>
+#include <random>
 
 template<class Type>
 Type read_value(const string_view message) {
@@ -86,9 +87,17 @@ void ex_12_13() {
 	vector<Point> points = count_points(center, N, n, m);
 	vector<Graph_lib::Line*> lines{};
 
+	random_device rd;
+	mt19937 mt(rd());
+	uniform_int_distribution<int> dist(0, 255);
+
 	for (int i = 0; i < points.size(); i+=2) {
+		int clr = dist(mt);
+
+		Graph_lib::Color temp(clr);
+
 		Graph_lib::Line *l = new Graph_lib::Line{ points[i], points[i+1] };
-		l->set_color(Graph_lib::Color::red);
+		l->set_color(temp);
 		lines.push_back(l);
 	}
 
