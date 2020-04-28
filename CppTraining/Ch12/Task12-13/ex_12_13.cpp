@@ -4,6 +4,7 @@
 #include <cmath>
 #include <string_view>
 #include <random>
+#include <memory>
 
 template<class Type>
 Type read_value(const string_view message) {
@@ -85,7 +86,7 @@ void ex_12_13() {
 	win.attach(s_ellips);
 
 	vector<Point> points = count_points(center, N, n, m);
-	vector<Graph_lib::Line*> lines{};
+	vector<unique_ptr<Graph_lib::Line>> lines{};
 
 	random_device rd;
 	mt19937 mt(rd());
@@ -96,9 +97,9 @@ void ex_12_13() {
 
 		Graph_lib::Color temp(clr);
 
-		Graph_lib::Line *l = new Graph_lib::Line{ points[i], points[i+1] };
-		l->set_color(temp);
-		lines.push_back(l);
+		unique_ptr<Graph_lib::Line> l = make_unique<Graph_lib::Line>(points[i], points[i + 1]);
+		l.get()->set_color(temp);
+		lines.push_back(move(l));
 	}
 
 	for (const auto & u : lines) {
