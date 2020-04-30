@@ -25,8 +25,8 @@ int main() {
 		//ex_8();
 		//ex_9();
 		//ex_10();
-		ex_11();
-		//ex_12_13();
+		//ex_11();
+		ex_12_13();
 	}
 	catch (const exception & ex) {
 		cout << "Error: " << ex.what() << endl;
@@ -36,5 +36,6 @@ int main() {
 		cout << "Unnown error\n";
 		keep_window_open();
 	}
+	//system("pause");
 	return 0;
 }
