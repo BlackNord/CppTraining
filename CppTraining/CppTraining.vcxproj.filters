@@ -73,6 +73,9 @@
     <Filter Include="Ch13\Task3">
       <UniqueIdentifier>{d112ee1f-6d67-47cc-944d-e9b12b167ebf}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Ch13\Task4">
+      <UniqueIdentifier>{a4126f78-3651-4ff3-9e72-4ee13e866127}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Stroustruap_libs\Graph.cpp">
@@ -137,6 +140,9 @@
     </ClCompile>
     <ClCompile Include="Ch13\My_Classes\Arrow.cpp">
       <Filter>Ch13\My_classes</Filter>
+    </ClCompile>
+    <ClCompile Include="Ch13\Task4\ex_4.cpp">
+      <Filter>Ch13\Task4</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -211,6 +217,9 @@
     </ClInclude>
     <ClInclude Include="Ch13\Task3\ex_3.h">
       <Filter>Ch13\Task3</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch13\Task4\ex_4.h">
+      <Filter>Ch13\Task4</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
