@@ -4,88 +4,92 @@
 
 using namespace std;
 
-Point n(const Graph_lib::Rectangle & obj) {
-	Point pon{ 0,0 };
+namespace myGraph_lib {
+	Point n(const Graph_lib::Rectangle& obj) {
+		Point pon{ 0,0 };
 
-	pon.x = obj.point(0).x + obj.width() / 2;
-	pon.y = obj.point(0).y;
+		pon.x = obj.point(0).x + obj.width() / 2;
+		pon.y = obj.point(0).y;
 
-	return pon;
-}
+		return pon;
+	}
 
-Point s(const Graph_lib::Rectangle& obj) {
-	Point pon{ 0,0 };
+	Point s(const Graph_lib::Rectangle& obj) {
+		Point pon{ 0,0 };
 
-	pon.x = obj.point(0).x + obj.width() / 2;
-	pon.y = obj.point(0).y + obj.height();
+		pon.x = obj.point(0).x + obj.width() / 2;
+		pon.y = obj.point(0).y + obj.height();
 
-	return pon;
-}
+		return pon;
+	}
 
-Point e(const Graph_lib::Rectangle& obj) {
-	Point pon{ 0,0 };
+	Point e(const Graph_lib::Rectangle& obj) {
+		Point pon{ 0,0 };
 
-	pon.x = obj.point(0).x + obj.width();
-	pon.y = obj.point(0).y + obj.height() / 2;
+		pon.x = obj.point(0).x + obj.width();
+		pon.y = obj.point(0).y + obj.height() / 2;
 
-	return pon;
-}
+		return pon;
+	}
 
-Point w(const Graph_lib::Rectangle& obj) {
-	Point pon{ 0,0 };
+	Point w(const Graph_lib::Rectangle& obj) {
+		Point pon{ 0,0 };
 
-	pon.x = obj.point(0).x;
-	pon.y = obj.point(0).y + obj.height() / 2;
+		pon.x = obj.point(0).x;
+		pon.y = obj.point(0).y + obj.height() / 2;
 
-	return pon;
-}
+		return pon;
+	}
 
-Point center(const Graph_lib::Rectangle& obj) {
-	Point pon{ 0,0 };
+	Point center(const Graph_lib::Rectangle& obj) {
+		Point pon{ 0,0 };
 
-	pon.x = obj.point(0).x + obj.width() / 2;
-	pon.y = obj.point(0).y + obj.height() / 2;
+		pon.x = obj.point(0).x + obj.width() / 2;
+		pon.y = obj.point(0).y + obj.height() / 2;
 
-	return pon;
-}
+		return pon;
+	}
 
-Point ne(const Graph_lib::Rectangle& obj) {
-	Point pon{ 0,0 };
+	Point ne(const Graph_lib::Rectangle& obj) {
+		Point pon{ 0,0 };
 
-	pon.x = obj.point(0).x + obj.width();
-	pon.y = obj.point(0).y;
+		pon.x = obj.point(0).x + obj.width();
+		pon.y = obj.point(0).y;
 
-	return pon;
-}
+		return pon;
+	}
 
-Point se(const Graph_lib::Rectangle& obj) {
-	Point pon{ 0,0 };
+	Point se(const Graph_lib::Rectangle& obj) {
+		Point pon{ 0,0 };
 
-	pon.x = obj.point(0).x + obj.width();
-	pon.y = obj.point(0).y + obj.height();
+		pon.x = obj.point(0).x + obj.width();
+		pon.y = obj.point(0).y + obj.height();
 
-	return pon;
-}
+		return pon;
+	}
 
-Point sw(const Graph_lib::Rectangle& obj) {
-	Point pon{ 0,0 };
+	Point sw(const Graph_lib::Rectangle& obj) {
+		Point pon{ 0,0 };
 
-	pon.x = obj.point(0).x;
-	pon.y = obj.point(0).y + obj.height();
+		pon.x = obj.point(0).x;
+		pon.y = obj.point(0).y + obj.height();
 
-	return pon;
-}
+		return pon;
+	}
 
-Point nw(const Graph_lib::Rectangle& obj) {
-	Point pon{ 0,0 };
+	Point nw(const Graph_lib::Rectangle& obj) {
+		Point pon{ 0,0 };
 
-	pon.x = obj.point(0).x;
-	pon.y = obj.point(0).y;
+		pon.x = obj.point(0).x;
+		pon.y = obj.point(0).y;
 
-	return pon;
+		return pon;
+	}
 }
 
 void ex_4() {
+	using namespace myGraph_lib;
+
 	Simple_window win{ Point {20, 50 }, 1460, 750, "Ex_4" };
 
 	Graph_lib::Rectangle obj1(Point{ 250,250 }, 400, 400);
