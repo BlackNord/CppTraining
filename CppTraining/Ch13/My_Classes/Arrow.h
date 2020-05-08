@@ -1,13 +1,15 @@
 #pragma once
+
 #include "../../Stroustruap_libs/Graph.h"
 #include "../../Stroustruap_libs/std_lib_facilities_4.h"
 #include <cmath>
+#include <corecrt_math_defines.h>
 
 namespace myGraph_lib {
 	class Arrow : public Graph_lib::Line {
 	private:
 		Point p1, p2;
-		double angl{ 3.14 - 0.5 };		// 30 grad
+		double angl{ M_PI - 0.5 };		// 30 grad
 	public:
 		Arrow(Point _start, Point _end) : Line(_start, _end) {
 			Point direction{ _end.x - _start.x, _start.y - _end.y };
