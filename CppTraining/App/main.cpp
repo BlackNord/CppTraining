@@ -6,6 +6,7 @@
 #include "../Ch13/Task5/ex_5.h"
 #include "../Ch13/Task7/ex_7.h"
 #include "../Ch13/Task8-9/ex_8_9.h"
+#include "../Ch13/Task10/ex_10.h"
 
 int main() {
 	try {
@@ -15,7 +16,8 @@ int main() {
 		//ex_4();
 		//ex_5();
 		//ex_7();
-		ex_8_9();
+		//ex_8_9();
+		ex_10();
 	}
 	catch (const exception & ex) {
 		cout << "Error: " << ex.what() << endl;
