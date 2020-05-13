@@ -174,6 +174,7 @@
     <ClCompile Include="Ch12\Task9\ex_9.cpp" />
     <ClCompile Include="Ch13\My_Classes\Arrow.cpp" />
     <ClCompile Include="Ch13\Task10\ex_10.cpp" />
+    <ClCompile Include="Ch13\Task11\ex_11.cpp" />
     <ClCompile Include="Ch13\Task1\ex_1.cpp" />
     <ClCompile Include="Ch13\Task2\ex_2.cpp" />
     <ClCompile Include="Ch13\Task3\ex_3.cpp" />
@@ -205,6 +206,7 @@
     <ClInclude Include="Ch13\My_Classes\Regular_hexagon.h" />
     <ClInclude Include="Ch13\My_Classes\Regular_polygon.h" />
     <ClInclude Include="Ch13\Task10\ex_10.h" />
+    <ClInclude Include="Ch13\Task11\ex_11.h" />
     <ClInclude Include="Ch13\Task1\ex_1.h" />
     <ClInclude Include="Ch13\Task2\ex_2.h" />
     <ClInclude Include="Ch13\Task3\ex_3.h" />
