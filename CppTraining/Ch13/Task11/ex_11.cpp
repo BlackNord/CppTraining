@@ -3,7 +3,7 @@
 #include "../../Stroustruap_libs/Graph.h"
 
 void ex_11() {
-    Simple_window win{ Point {20, 50 }, 1460, 750, "Ex_10" };
+    Simple_window win{ Point {20, 50 }, 1460, 750, "Ex_11" };
 
     Graph_lib::Axis ox{ Graph_lib::Axis::x, Point{530, win.y_max() / 2}, 400, 20, "X" };
     ox.set_color(Graph_lib::Color::black);

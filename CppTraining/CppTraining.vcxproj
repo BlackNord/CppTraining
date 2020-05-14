@@ -175,6 +175,10 @@
     <ClCompile Include="Ch13\My_Classes\Arrow.cpp" />
     <ClCompile Include="Ch13\Task10\ex_10.cpp" />
     <ClCompile Include="Ch13\Task11\ex_11.cpp" />
+    <ClCompile Include="Ch13\Task13\ex_13.cpp" />
+    <ClCompile Include="Ch13\Task14\ex_14.cpp" />
+    <ClCompile Include="Ch13\Task15\ex_15.cpp" />
+    <ClCompile Include="Ch13\Task16-17\ex_16_17.cpp" />
     <ClCompile Include="Ch13\Task1\ex_1.cpp" />
     <ClCompile Include="Ch13\Task2\ex_2.cpp" />
     <ClCompile Include="Ch13\Task3\ex_3.cpp" />
@@ -205,8 +209,13 @@
     <ClInclude Include="Ch13\My_Classes\Box.h" />
     <ClInclude Include="Ch13\My_Classes\Regular_hexagon.h" />
     <ClInclude Include="Ch13\My_Classes\Regular_polygon.h" />
+    <ClInclude Include="Ch13\My_Classes\Right_triangle.h" />
     <ClInclude Include="Ch13\Task10\ex_10.h" />
     <ClInclude Include="Ch13\Task11\ex_11.h" />
+    <ClInclude Include="Ch13\Task13\ex_13.h" />
+    <ClInclude Include="Ch13\Task14\ex_14.h" />
+    <ClInclude Include="Ch13\Task15\ex_15.h" />
+    <ClInclude Include="Ch13\Task16-17\ex_16_17.h" />
     <ClInclude Include="Ch13\Task1\ex_1.h" />
     <ClInclude Include="Ch13\Task2\ex_2.h" />
     <ClInclude Include="Ch13\Task3\ex_3.h" />

@@ -91,6 +91,18 @@
     <Filter Include="Ch13\Task11">
       <UniqueIdentifier>{ab79ba42-dd51-400b-82b3-a386a5902bd1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Ch13\Task13">
+      <UniqueIdentifier>{ebd7cee3-80fa-4890-83f6-2c1c68aea41a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ch13\Task14">
+      <UniqueIdentifier>{bcd19847-8ab7-4cf5-a18d-84eda49cafda}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ch13\Task15">
+      <UniqueIdentifier>{f5105109-f599-4ae6-928e-1f9742cab50b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ch13\Task16-17">
+      <UniqueIdentifier>{e7435632-d895-4ffa-96e4-94ba11e4fc68}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Stroustruap_libs\Graph.cpp">
@@ -173,6 +185,18 @@
     </ClCompile>
     <ClCompile Include="Ch13\Task11\ex_11.cpp">
       <Filter>Ch13\Task11</Filter>
+    </ClCompile>
+    <ClCompile Include="Ch13\Task13\ex_13.cpp">
+      <Filter>Ch13\Task13</Filter>
+    </ClCompile>
+    <ClCompile Include="Ch13\Task14\ex_14.cpp">
+      <Filter>Ch13\Task14</Filter>
+    </ClCompile>
+    <ClCompile Include="Ch13\Task15\ex_15.cpp">
+      <Filter>Ch13\Task15</Filter>
+    </ClCompile>
+    <ClCompile Include="Ch13\Task16-17\ex_16_17.cpp">
+      <Filter>Ch13\Task16-17</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -271,6 +295,21 @@
     </ClInclude>
     <ClInclude Include="Ch13\Task11\ex_11.h">
       <Filter>Ch13\Task11</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch13\Task13\ex_13.h">
+      <Filter>Ch13\Task13</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch13\My_Classes\Right_triangle.h">
+      <Filter>Ch13\My_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch13\Task14\ex_14.h">
+      <Filter>Ch13\Task14</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch13\Task15\ex_15.h">
+      <Filter>Ch13\Task15</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch13\Task16-17\ex_16_17.h">
+      <Filter>Ch13\Task16-17</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

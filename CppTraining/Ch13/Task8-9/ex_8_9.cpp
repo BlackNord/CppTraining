@@ -12,8 +12,8 @@ void ex_8_9() {
     int dist = pow(0.75, 0.5) * rad;
    
     for (int k{ cent_y }, i{ 0 }; i < 2; k += rad * 2 - pow(pow(rad, 2) - pow(dist, 2), 0.5), ++i) {
-        for (int i = cent_x + p; i <= cent_x * 2; i += dist * 2) {
-            vc.push_back(new myGraph_lib::Regular_hexagon(Point{ i, k }, rad));
+        for (int j = cent_x + p; j <= cent_x * 2; j += dist * 2) {
+            vc.push_back(new myGraph_lib::Regular_hexagon(Point{ j, k }, rad));
             vc[vc.size() - 1].set_color(Graph_lib::Color::black);
             win.attach(vc[vc.size() - 1]);
         }
