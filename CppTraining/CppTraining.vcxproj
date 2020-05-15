@@ -175,6 +175,7 @@
     <ClCompile Include="Ch13\My_Classes\Arrow.cpp" />
     <ClCompile Include="Ch13\Task10\ex_10.cpp" />
     <ClCompile Include="Ch13\Task11\ex_11.cpp" />
+    <ClCompile Include="Ch13\Task12\ex_12.cpp" />
     <ClCompile Include="Ch13\Task13\ex_13.cpp" />
     <ClCompile Include="Ch13\Task14\ex_14.cpp" />
     <ClCompile Include="Ch13\Task15\ex_15.cpp" />
@@ -212,6 +213,7 @@
     <ClInclude Include="Ch13\My_Classes\Right_triangle.h" />
     <ClInclude Include="Ch13\Task10\ex_10.h" />
     <ClInclude Include="Ch13\Task11\ex_11.h" />
+    <ClInclude Include="Ch13\Task12\ex_12.h" />
     <ClInclude Include="Ch13\Task13\ex_13.h" />
     <ClInclude Include="Ch13\Task14\ex_14.h" />
     <ClInclude Include="Ch13\Task15\ex_15.h" />

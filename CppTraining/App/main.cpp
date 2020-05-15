@@ -12,6 +12,7 @@
 #include "../Ch13/Task14/ex_14.h"
 #include "../Ch13/Task15/ex_15.h"
 #include "../Ch13/Task16-17/ex_16_17.h"
+#include "../Ch13/Task12/ex_12.h"
 
 int main() {
 	try {
@@ -27,7 +28,8 @@ int main() {
 		//ex_13();
 		//ex_14();
 		//ex_15();
-		ex_16_17();
+		//ex_16_17();
+		ex_12();
 	}
 	catch (const exception & ex) {
 		cout << "Error: " << ex.what() << endl;
