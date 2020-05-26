@@ -115,6 +115,21 @@
     <Filter Include="Ch13\Task19">
       <UniqueIdentifier>{070ab932-ee22-454f-a3b1-c94266c27c44}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Ch14">
+      <UniqueIdentifier>{5efbdb7f-5d8b-45fd-8175-b4f081643616}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ch14\Task1z">
+      <UniqueIdentifier>{b8d33fa0-579b-43ab-a708-d80ab200362b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ch14\Task1">
+      <UniqueIdentifier>{51dd9150-0945-4ce5-99bf-0610890066b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ch14\My_Classes_14">
+      <UniqueIdentifier>{9ae64749-d75d-4d75-af81-ced4e73f22a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ch14\Task4">
+      <UniqueIdentifier>{07dcf35e-c8ae-455a-add2-6e4b806661a1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Stroustruap_libs\Graph.cpp">
@@ -221,6 +236,15 @@
     </ClCompile>
     <ClCompile Include="Ch13\Task19\ex_19.cpp">
       <Filter>Ch13\Task19</Filter>
+    </ClCompile>
+    <ClCompile Include="Ch14\Task1z\ex_1_14z.cpp">
+      <Filter>Ch14\Task1z</Filter>
+    </ClCompile>
+    <ClCompile Include="Ch14\Task1\ex_1_14.cpp">
+      <Filter>Ch14\Task1</Filter>
+    </ClCompile>
+    <ClCompile Include="Ch14\Task4\ex_4_14.cpp">
+      <Filter>Ch14\Task4</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -355,6 +379,30 @@
     </ClInclude>
     <ClInclude Include="Ch13\My_Classes\Star.h">
       <Filter>Ch13\My_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch14\Task1z\ex_1_14z.h">
+      <Filter>Ch14\Task1z</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch14\Task1\ex_1_14.h">
+      <Filter>Ch14\Task1</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch14\My_Classes_14\Frowny.h">
+      <Filter>Ch14\My_Classes_14</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch14\My_Classes_14\Smiley.h">
+      <Filter>Ch14\My_Classes_14</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch14\My_Classes_14\Frowny_h.h">
+      <Filter>Ch14\My_Classes_14</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch14\My_Classes_14\Smiley_h.h">
+      <Filter>Ch14\My_Classes_14</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch14\My_Classes_14\Immobile_Circle.h">
+      <Filter>Ch14\My_Classes_14</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch14\Task4\ex_4_14.h">
+      <Filter>Ch14\Task4</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
