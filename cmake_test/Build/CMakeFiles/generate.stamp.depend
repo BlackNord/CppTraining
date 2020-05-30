@@ -1,0 +1,23 @@
+# CMake generation dependency list for this directory.
+F:/Programms/Visual Studio 2019/Projects/cmake_test/Build/CMakeFiles/3.17.3/CMakeCCompiler.cmake
+F:/Programms/Visual Studio 2019/Projects/cmake_test/Build/CMakeFiles/3.17.3/CMakeCXXCompiler.cmake
+F:/Programms/Visual Studio 2019/Projects/cmake_test/Build/CMakeFiles/3.17.3/CMakeRCCompiler.cmake
+F:/Programms/Visual Studio 2019/Projects/cmake_test/Build/CMakeFiles/3.17.3/CMakeSystem.cmake
+F:/Programms/Visual Studio 2019/Projects/cmake_test/CMakeLists.txt
+F:/Programms/cmake-3.17.3-win64-x64/share/cmake-3.17/Modules/CMakeCInformation.cmake
+F:/Programms/cmake-3.17.3-win64-x64/share/cmake-3.17/Modules/CMakeCXXInformation.cmake
+F:/Programms/cmake-3.17.3-win64-x64/share/cmake-3.17/Modules/CMakeCommonLanguageInclude.cmake
+F:/Programms/cmake-3.17.3-win64-x64/share/cmake-3.17/Modules/CMakeGenericSystem.cmake
+F:/Programms/cmake-3.17.3-win64-x64/share/cmake-3.17/Modules/CMakeInitializeConfigs.cmake
+F:/Programms/cmake-3.17.3-win64-x64/share/cmake-3.17/Modules/CMakeLanguageInformation.cmake
+F:/Programms/cmake-3.17.3-win64-x64/share/cmake-3.17/Modules/CMakeRCInformation.cmake
+F:/Programms/cmake-3.17.3-win64-x64/share/cmake-3.17/Modules/CMakeSystemSpecificInformation.cmake
+F:/Programms/cmake-3.17.3-win64-x64/share/cmake-3.17/Modules/CMakeSystemSpecificInitialize.cmake
+F:/Programms/cmake-3.17.3-win64-x64/share/cmake-3.17/Modules/Compiler/CMakeCommonCompilerMacros.cmake
+F:/Programms/cmake-3.17.3-win64-x64/share/cmake-3.17/Modules/Compiler/MSVC-C.cmake
+F:/Programms/cmake-3.17.3-win64-x64/share/cmake-3.17/Modules/Compiler/MSVC-CXX.cmake
+F:/Programms/cmake-3.17.3-win64-x64/share/cmake-3.17/Modules/Platform/Windows-MSVC-C.cmake
+F:/Programms/cmake-3.17.3-win64-x64/share/cmake-3.17/Modules/Platform/Windows-MSVC-CXX.cmake
+F:/Programms/cmake-3.17.3-win64-x64/share/cmake-3.17/Modules/Platform/Windows-MSVC.cmake
+F:/Programms/cmake-3.17.3-win64-x64/share/cmake-3.17/Modules/Platform/Windows.cmake
+F:/Programms/cmake-3.17.3-win64-x64/share/cmake-3.17/Modules/Platform/WindowsPaths.cmake

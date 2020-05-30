@@ -193,6 +193,7 @@
     <ClCompile Include="Ch14\Task1z\ex_1_14z.cpp" />
     <ClCompile Include="Ch14\Task1\ex_1_14.cpp" />
     <ClCompile Include="Ch14\Task4\ex_4_14.cpp" />
+    <ClCompile Include="Ch14\Task8\ex_8_14.cpp" />
     <ClCompile Include="Stroustruap_libs\Graph.cpp" />
     <ClCompile Include="Stroustruap_libs\GUI.cpp" />
     <ClCompile Include="Stroustruap_libs\Simple_window.cpp" />
@@ -240,11 +241,13 @@
     <ClInclude Include="Ch14\My_Classes_14\Frowny.h" />
     <ClInclude Include="Ch14\My_Classes_14\Frowny_h.h" />
     <ClInclude Include="Ch14\My_Classes_14\Immobile_Circle.h" />
+    <ClInclude Include="Ch14\My_Classes_14\Octagon.h" />
     <ClInclude Include="Ch14\My_Classes_14\Smiley.h" />
     <ClInclude Include="Ch14\My_Classes_14\Smiley_h.h" />
     <ClInclude Include="Ch14\Task1z\ex_1_14z.h" />
     <ClInclude Include="Ch14\Task1\ex_1_14.h" />
     <ClInclude Include="Ch14\Task4\ex_4_14.h" />
+    <ClInclude Include="Ch14\Task8\ex_8_14.h" />
     <ClInclude Include="Stroustruap_libs\Graph.h" />
     <ClInclude Include="Stroustruap_libs\GUI.h" />
     <ClInclude Include="Stroustruap_libs\Point.h" />

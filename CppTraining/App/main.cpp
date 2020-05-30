@@ -2,12 +2,14 @@
 #include "../Ch14/Task1z/ex_1_14z.h"
 #include "../Ch14/Task1/ex_1_14.h"
 #include "../Ch14/Task4/ex_4_14.h"
+#include "../Ch14/Task8/ex_8_14.h"
 
 int main() {
 	try {
 		//ex_1_14z();
 		//ex_1_14();
-		ex_4_14();
+		//ex_4_14();
+		ex_8_14();
 	}
 	catch (const exception & ex) {
 		cout << "Error: " << ex.what() << endl;

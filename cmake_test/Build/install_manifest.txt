@@ -1,0 +1,2 @@
+C:/Program Files (x86)/cmake_test/bin/cmake_test.exe
+C:/Program Files (x86)/cmake_test/src/main.cpp

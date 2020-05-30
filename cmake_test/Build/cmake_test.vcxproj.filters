@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="F:\Programms\Visual Studio 2019\Projects\cmake_test\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="F:\Programms\Visual Studio 2019\Projects\cmake_test\CmakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{E5A323D1-8B5E-3D87-A297-8C1C1618E8EA}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
