@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <CustomBuild Include="F:\Programms\Visual Studio 2019\Projects\cmake_test\Build\CMakeFiles\2adc3ccf5be31913f65b19ae98c59049\generate.stamp.rule">
+    <CustomBuild Include="F:\Programms\Visual Studio 2019\Projects\CppTraining\cmake_test\Build\CMakeFiles\5184a8ab73677d7c09ab756052d73194\generate.stamp.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{42FCDE42-CC89-3A73-ADF3-E92076154EDB}</UniqueIdentifier>
+      <UniqueIdentifier>{960C7DF0-7B6B-32EF-9135-1B298885F0D9}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

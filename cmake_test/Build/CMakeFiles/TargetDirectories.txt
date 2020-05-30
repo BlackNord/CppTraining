@@ -1,4 +1,4 @@
-F:/Programms/Visual Studio 2019/Projects/cmake_test/Build/CMakeFiles/cmake_test.dir
-F:/Programms/Visual Studio 2019/Projects/cmake_test/Build/CMakeFiles/INSTALL.dir
-F:/Programms/Visual Studio 2019/Projects/cmake_test/Build/CMakeFiles/ALL_BUILD.dir
-F:/Programms/Visual Studio 2019/Projects/cmake_test/Build/CMakeFiles/ZERO_CHECK.dir
+F:/Programms/Visual Studio 2019/Projects/CppTraining/cmake_test/Build/CMakeFiles/cmake_test.dir
+F:/Programms/Visual Studio 2019/Projects/CppTraining/cmake_test/Build/CMakeFiles/INSTALL.dir
+F:/Programms/Visual Studio 2019/Projects/CppTraining/cmake_test/Build/CMakeFiles/ALL_BUILD.dir
+F:/Programms/Visual Studio 2019/Projects/CppTraining/cmake_test/Build/CMakeFiles/ZERO_CHECK.dir

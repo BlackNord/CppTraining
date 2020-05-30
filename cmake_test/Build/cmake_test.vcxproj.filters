@@ -1,16 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="F:\Programms\Visual Studio 2019\Projects\cmake_test\main.cpp">
+    <ClCompile Include="F:\Programms\Visual Studio 2019\Projects\CppTraining\cmake_test\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="first.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="F:\Programms\Visual Studio 2019\Projects\cmake_test\CmakeLists.txt" />
+    <CustomBuild Include="F:\Programms\Visual Studio 2019\Projects\CppTraining\cmake_test\CmakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{E5A323D1-8B5E-3D87-A297-8C1C1618E8EA}</UniqueIdentifier>
+      <UniqueIdentifier>{E81B7612-4E4F-3ECA-AF5B-396CB21FC7F3}</UniqueIdentifier>
     </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="first.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
