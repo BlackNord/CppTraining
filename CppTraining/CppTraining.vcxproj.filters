@@ -133,6 +133,15 @@
     <Filter Include="Ch14\Task8">
       <UniqueIdentifier>{52886186-5222-4ae2-8ee3-9aa4663bf174}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Ch14\Task15">
+      <UniqueIdentifier>{ef77b725-47e8-446c-849d-438facb538e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ch14\Task16">
+      <UniqueIdentifier>{59a80f8a-347d-4056-a2bf-e3c764906c90}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ch14\Task5">
+      <UniqueIdentifier>{79ad0435-4833-4fa0-b918-821bdf93999f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Stroustruap_libs\Graph.cpp">
@@ -251,6 +260,15 @@
     </ClCompile>
     <ClCompile Include="Ch14\Task8\ex_8_14.cpp">
       <Filter>Ch14\Task8</Filter>
+    </ClCompile>
+    <ClCompile Include="Ch14\Task15\ex_15_14.cpp">
+      <Filter>Ch14\Task15</Filter>
+    </ClCompile>
+    <ClCompile Include="Ch14\Task16\ex_16_14.cpp">
+      <Filter>Ch14\Task16</Filter>
+    </ClCompile>
+    <ClCompile Include="Ch14\Task5\ex_5_14.cpp">
+      <Filter>Ch14\Task5</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -414,6 +432,24 @@
       <Filter>Ch14\Task8</Filter>
     </ClInclude>
     <ClInclude Include="Ch14\My_Classes_14\Octagon.h">
+      <Filter>Ch14\My_Classes_14</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch14\Task15\ex_15_14.h">
+      <Filter>Ch14\Task15</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch14\My_Classes_14\myIterator.h">
+      <Filter>Ch14\My_Classes_14</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch14\Task16\ex_16_14.h">
+      <Filter>Ch14\Task16</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch14\My_Classes_14\Striped_rectangle.h">
+      <Filter>Ch14\My_Classes_14</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch14\Task5\ex_5_14.h">
+      <Filter>Ch14\Task5</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch14\My_Classes_14\Controller.h">
       <Filter>Ch14\My_Classes_14</Filter>
     </ClInclude>
   </ItemGroup>
