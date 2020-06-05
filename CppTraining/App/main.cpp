@@ -6,6 +6,11 @@
 #include "../Ch14/Task15/ex_15_14.h"
 #include "../Ch14/Task16/ex_16_14.h"
 #include "../Ch14/Task5/ex_5_14.h"
+#include "../Ch14/Task6/ex_6_14.h"
+#include "../Ch14/Task7/ex_7_14.h"
+#include "../Ch14/Task17/ex_17_14.h"
+
+//9,10,(11,12,13,14),17
 
 int main() {
 	try {
@@ -15,7 +20,10 @@ int main() {
 		//ex_8_14();
 		//ex_15_14();
 		//ex_16_14();
-		ex_5_14();
+		//ex_5_14();
+		//ex_6_14();
+		//ex_7_14();
+		ex_17_14();
 	}
 	catch (const exception & ex) {
 		cout << "Error: " << ex.what() << endl;
