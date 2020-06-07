@@ -9,6 +9,14 @@ namespace myGraph_lib {
 	private:
 		Graph_lib::Text t1;
 	public:
+		void set_text(const string& str) {
+			t1.set_label(str);
+		}
+
+		string get_text() {
+			return t1.label();
+		}
+
 		tBox(Point _point, int _weight, int _height, int _rad, const string& _text) : Box(_point, _weight, _height, _rad),
 			t1{ Point{_point.x + (int)(0.3 * _weight), _point.y + (int)(0.9 * _height)}, _text } { }
 

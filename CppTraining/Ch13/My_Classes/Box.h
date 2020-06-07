@@ -11,6 +11,10 @@ namespace myGraph_lib {
 		int height;
 		int rad;
 	public:
+		Point get_point() { return point; }
+		int get_weight() { return weight; }
+		int get_height() { return height; }
+		int get_rad() { return rad; }
 		Box(Point _point, int _weight, int _height, int _rad) : point{ _point }, weight{ _weight }, height{ _height } { 
 			if (_rad > weight or _rad > height) error("Bad rad");
 			else rad = _rad;
