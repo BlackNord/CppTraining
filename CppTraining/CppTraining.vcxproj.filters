@@ -154,6 +154,9 @@
     <Filter Include="Ch14\Task11-14">
       <UniqueIdentifier>{3c4d8bc3-580e-4c0b-8106-0bb6ad090368}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Ch14\Task9">
+      <UniqueIdentifier>{2c28a1ef-f60c-4f46-a59e-d5c2a1cb7c13}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Stroustruap_libs\Graph.cpp">
@@ -293,6 +296,9 @@
     </ClCompile>
     <ClCompile Include="Ch14\Task11-14\ex_11_14_14.cpp">
       <Filter>Ch14\Task11-14</Filter>
+    </ClCompile>
+    <ClCompile Include="Ch14\Task9\ex_9_14.cpp">
+      <Filter>Ch14\Task9</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -495,6 +501,15 @@
       <Filter>Ch14\Task11-14</Filter>
     </ClInclude>
     <ClInclude Include="Ch14\My_Classes_14\Binary_tree.h">
+      <Filter>Ch14\My_Classes_14</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch14\Task9\ex_9_14.h">
+      <Filter>Ch14\Task9</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch14\My_Classes_14\Chess_board.h">
+      <Filter>Ch14\My_Classes_14</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch14\My_Classes_14\Group.h">
       <Filter>Ch14\My_Classes_14</Filter>
     </ClInclude>
   </ItemGroup>

@@ -201,6 +201,7 @@
     <ClCompile Include="Ch14\Task6\ex_6_14.cpp" />
     <ClCompile Include="Ch14\Task7\ex_7_14.cpp" />
     <ClCompile Include="Ch14\Task8\ex_8_14.cpp" />
+    <ClCompile Include="Ch14\Task9\ex_9_14.cpp" />
     <ClCompile Include="Stroustruap_libs\Graph.cpp" />
     <ClCompile Include="Stroustruap_libs\GUI.cpp" />
     <ClCompile Include="Stroustruap_libs\Simple_window.cpp" />
@@ -246,9 +247,11 @@
     <ClInclude Include="Ch13\Task7\ex_7.h" />
     <ClInclude Include="Ch13\Task8-9\ex_8_9.h" />
     <ClInclude Include="Ch14\My_Classes_14\Binary_tree.h" />
+    <ClInclude Include="Ch14\My_Classes_14\Chess_board.h" />
     <ClInclude Include="Ch14\My_Classes_14\Controller.h" />
     <ClInclude Include="Ch14\My_Classes_14\Frowny.h" />
     <ClInclude Include="Ch14\My_Classes_14\Frowny_h.h" />
+    <ClInclude Include="Ch14\My_Classes_14\Group.h" />
     <ClInclude Include="Ch14\My_Classes_14\Immobile_Circle.h" />
     <ClInclude Include="Ch14\My_Classes_14\myIterator.h" />
     <ClInclude Include="Ch14\My_Classes_14\Octagon.h" />
@@ -268,6 +271,7 @@
     <ClInclude Include="Ch14\Task6\ex_6_14.h" />
     <ClInclude Include="Ch14\Task7\ex_7_14.h" />
     <ClInclude Include="Ch14\Task8\ex_8_14.h" />
+    <ClInclude Include="Ch14\Task9\ex_9_14.h" />
     <ClInclude Include="Stroustruap_libs\Graph.h" />
     <ClInclude Include="Stroustruap_libs\GUI.h" />
     <ClInclude Include="Stroustruap_libs\Point.h" />

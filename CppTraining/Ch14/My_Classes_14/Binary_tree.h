@@ -4,8 +4,6 @@
 #include "../../Ch13/My_Classes/Arrow.h"
 #include <vector>
 
-// внутри узлов текс-путь к узлу автоматически
-
 namespace myGraph_lib {
 	template <typename T>
 	class Binary_tree : public Graph_lib::Shape {
