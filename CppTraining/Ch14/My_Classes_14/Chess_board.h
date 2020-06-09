@@ -5,6 +5,9 @@
 namespace myGraph_lib {
 	class Chess_board : public Graph_lib::Shape {
 	private:
+		enum class side{ left, right };
+		enum class team;
+
 		Graph_lib::Vector_ref<Graph_lib::Circle> checkers_white;
 		Graph_lib::Vector_ref<Graph_lib::Circle> checkers_black;
 		Graph_lib::Vector_ref<Graph_lib::Vector_ref<Graph_lib::Rectangle>> board;
@@ -47,18 +50,12 @@ namespace myGraph_lib {
 				checkers_black[i].set_fill_color(Graph_lib::Color::blue);
 			}
 		}
-	public:
-		Chess_board() {
-			set_board();
-			set_checkers();
-			color();
-		}
 
 		void set_checkers() {
 			for (int i{ 0 }; i < board.size(); ++i) {
 				for (int j{ 0 }; j < board.size(); ++j) {
 					if (i < 3 and (i % 2 != j % 2)) {
-						Point temp{ board[i][j].point(0).x + board[i][j].height()/2, board[i][j].point(0).y + board[i][j].width()/2 };
+						Point temp{ board[i][j].point(0).x + board[i][j].height() / 2, board[i][j].point(0).y + board[i][j].width() / 2 };
 						checkers_white.push_back(new Graph_lib::Circle{ temp, 20 });
 					}
 					if (i > 4 and (i % 2 != j % 2)) {
@@ -67,6 +64,67 @@ namespace myGraph_lib {
 					}
 				}
 			}
+		}
+
+		bool validation(side sid, team team, int i) {
+			if (team == team::black) {
+				if (sid == side::left and checkers_black[i].center().x == board[0][0].point(0).x + board[0][0].height() / 2) {
+					return false;
+				}
+				else if (sid == side::right and checkers_black[i].center().x == board[0][b_size-1].point(0).x + board[0][b_size - 1].height() / 2) {
+					return false;
+				}
+				else return true;
+			}
+
+			if (team == team::white) {
+				if (sid == side::right and checkers_white[i].center().x == board[0][0].point(0).x + board[0][0].height() / 2) {
+					return false;
+				}
+				else if (sid == side::left and checkers_white[i].center().x == board[0][b_size - 1].point(0).x + board[0][b_size - 1].height() / 2) {
+					return false;
+				}
+				else return true;
+			}
+		}
+
+	public:
+		enum class team { black, white };
+
+		Chess_board() {
+			set_board();
+			set_checkers();
+			color();
+		}
+
+		void move_right_checker(team team, int i) {
+			if (validation(side::right, team, i)) {
+				if (team == team::white) {
+					if (i < 0 or i > checkers_white.size() - 1) throw runtime_error("uncorrect checker");
+					checkers_white[i].move(-50, 50);
+				}
+				else if (team == team::black) {
+					if (i < 0 or i > checkers_black.size() - 1) throw runtime_error("uncorrect checker");
+					checkers_black[i].move(50, -50);
+				}
+				else throw runtime_error("uncorrect team");
+			}
+			else return;
+		}
+
+		void move_left_checker(team team, int i) {
+			if (validation(side::left, team, i)) {
+				if (team == team::white) {
+					if (i < 0 or i > checkers_white.size() - 1) throw runtime_error("uncorrect checker");
+					checkers_white[i].move(50, 50);
+				}
+				else if (team == team::black) {
+					if (i < 0 or i > checkers_black.size() - 1) throw runtime_error("uncorrect checker");
+					checkers_black[i].move(-50, -50);
+				}
+				else throw runtime_error("uncorrect team");
+			}
+			else return;
 		}
 
 		virtual void draw_lines() const override {
