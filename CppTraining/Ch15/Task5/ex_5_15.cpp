@@ -3,14 +3,24 @@
 #include "../../Stroustruap_libs/Simple_window.h"
 #include "../../Stroustruap_libs/std_lib_facilities_4.h"
 
-// 1 - 1/3 + 1/5 - 1/7 + 1/9 - 1/11 + ... стр 590
+double funct(int n) {
+    double rez{ 0 };
+    int zn{ 1 };
+
+    for (int i{ 1 }; i <= n; i += 2) {
+        rez += zn * int(1 / i);
+        zn *= -1;
+    }
+
+    return rez;
+}
 
 void ex_5_15() {
     int height{ 600 };
     int width{ 600 };
     int length{ 400 };
 
-    Simple_window win{ Point {20, 50 }, height, width, "Graphics of the functions" };
+    Simple_window win{ Point {20, 50 }, height, width, "Graphics" };
 
     Graph_lib::Axis ox{ Graph_lib::Axis::x, Point{(height - length)/2, width/2}, length, 20, "X" };
     ox.set_color(Graph_lib::Color::red);
@@ -28,13 +38,14 @@ void ex_5_15() {
     double r_min{ -10 }, r_max{ 11 };
     int number_of_points{ 400 };
 
-    Graph_lib::Function f1{ sin, r_min, r_max, orig, number_of_points, 20, 20 };
-    f1.set_color(Graph_lib::Color::black);
-    win.attach(f1);
+    Graph_lib::Open_polyline op1;
 
-    Graph_lib::Function f2{ cos, r_min, r_max, orig, number_of_points, 20, 20 };
-    f2.set_color(Graph_lib::Color::dark_blue);
-    win.attach(f2);
+    for (int i{ 0 }; i < 10; ++i) {
+        op1.add(Point(orig.x + int(i * 20), orig.y - int(funct(i) * 20)));
+        op1.set_color(Graph_lib::Color::black);
 
-    win.wait_for_button();
+        win.attach(op1);
+        win.wait_for_button();
+        win.detach(op1);
+    }
 }

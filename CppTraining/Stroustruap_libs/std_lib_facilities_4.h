@@ -106,9 +106,9 @@ template< class T> struct Vector : public std::vector<T> {
 	Vector(size_type n, const T& v) :std::vector<T>(n, v) {}
 	template <class I>
 	Vector(I first, I last) : std::vector<T>(first, last) {}
-#if GCC_VERSION >= 40603
+//#if GCC_VERSION >= 40603												// !!!  edit 13.06.20
 	Vector(initializer_list<T> list) : std::vector<T>(list) {}
-#endif
+//#endif
 
 	T& operator[](unsigned int i) // rather than return at(i);
 	{
