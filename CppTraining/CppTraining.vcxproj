@@ -209,6 +209,10 @@
     <ClCompile Include="Ch15\Task5\ex_5_15.cpp" />
     <ClCompile Include="Ch15\Task6-11\ex_6_11_15.cpp" />
     <ClCompile Include="Ch16\Task1z\ex_1_16z.cpp" />
+    <ClCompile Include="Ch16\Task1\ex_1_16.cpp" />
+    <ClCompile Include="Ch16\Task3\ex_3_16.cpp" />
+    <ClCompile Include="Ch16\Task4\ex_4_16.cpp" />
+    <ClCompile Include="Ch16\Task5\ex_5_16.cpp" />
     <ClCompile Include="Stroustruap_libs\Graph.cpp" />
     <ClCompile Include="Stroustruap_libs\GUI.cpp" />
     <ClCompile Include="Stroustruap_libs\Simple_window.cpp" />
@@ -285,7 +289,14 @@
     <ClInclude Include="Ch15\Task4\ex_4_15.h" />
     <ClInclude Include="Ch15\Task5\ex_5_15.h" />
     <ClInclude Include="Ch15\Task6-11\ex_6_11_15.h" />
+    <ClInclude Include="Ch16\My_classes_16\GraphMenu.h" />
+    <ClInclude Include="Ch16\My_classes_16\My_window.h" />
+    <ClInclude Include="Ch16\My_classes_16\My_window_move.h" />
     <ClInclude Include="Ch16\Task1z\ex_1_16z.h" />
+    <ClInclude Include="Ch16\Task1\ex_1_16.h" />
+    <ClInclude Include="Ch16\Task3\ex_3_16.h" />
+    <ClInclude Include="Ch16\Task4\ex_4_16.h" />
+    <ClInclude Include="Ch16\Task5\ex_5_16.h" />
     <ClInclude Include="Stroustruap_libs\Graph.h" />
     <ClInclude Include="Stroustruap_libs\GUI.h" />
     <ClInclude Include="Stroustruap_libs\Point.h" />

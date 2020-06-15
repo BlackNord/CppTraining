@@ -184,6 +184,21 @@
     <Filter Include="Ch16\Task1z">
       <UniqueIdentifier>{89f87e14-a662-4d02-851f-cd856391b22e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Ch16\Task1">
+      <UniqueIdentifier>{2ef56bba-6773-41dd-adc8-5fcb81528950}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ch16\My_classes_16">
+      <UniqueIdentifier>{8ffb9321-0963-4861-aa03-e39f61a2137a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ch16\Task3">
+      <UniqueIdentifier>{b26af4a5-9184-46ac-a04f-5e625ccfd2ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ch16\Task4">
+      <UniqueIdentifier>{21431742-1c9d-4227-935b-6b373449a0e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ch16\Task5">
+      <UniqueIdentifier>{845c102a-b5cc-46c0-9e29-d8bb0d8c8613}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Stroustruap_libs\Graph.cpp">
@@ -347,6 +362,18 @@
     </ClCompile>
     <ClCompile Include="Ch16\Task1z\ex_1_16z.cpp">
       <Filter>Ch16\Task1z</Filter>
+    </ClCompile>
+    <ClCompile Include="Ch16\Task1\ex_1_16.cpp">
+      <Filter>Ch16\Task1</Filter>
+    </ClCompile>
+    <ClCompile Include="Ch16\Task3\ex_3_16.cpp">
+      <Filter>Ch16\Task3</Filter>
+    </ClCompile>
+    <ClCompile Include="Ch16\Task4\ex_4_16.cpp">
+      <Filter>Ch16\Task4</Filter>
+    </ClCompile>
+    <ClCompile Include="Ch16\Task5\ex_5_16.cpp">
+      <Filter>Ch16\Task5</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -580,6 +607,27 @@
     </ClInclude>
     <ClInclude Include="Ch16\Task1z\ex_1_16z.h">
       <Filter>Ch16\Task1z</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch16\Task1\ex_1_16.h">
+      <Filter>Ch16\Task1</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch16\My_classes_16\My_window.h">
+      <Filter>Ch16\My_classes_16</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch16\Task3\ex_3_16.h">
+      <Filter>Ch16\Task3</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch16\Task4\ex_4_16.h">
+      <Filter>Ch16\Task4</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch16\Task5\ex_5_16.h">
+      <Filter>Ch16\Task5</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch16\My_classes_16\GraphMenu.h">
+      <Filter>Ch16\My_classes_16</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch16\My_classes_16\My_window_move.h">
+      <Filter>Ch16\My_classes_16</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
