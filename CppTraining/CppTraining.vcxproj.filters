@@ -199,6 +199,9 @@
     <Filter Include="Ch16\Task5">
       <UniqueIdentifier>{845c102a-b5cc-46c0-9e29-d8bb0d8c8613}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Ch16\Task2">
+      <UniqueIdentifier>{3396802a-6c72-45bb-a761-96fab1cb2e1d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Stroustruap_libs\Graph.cpp">
@@ -374,6 +377,9 @@
     </ClCompile>
     <ClCompile Include="Ch16\Task5\ex_5_16.cpp">
       <Filter>Ch16\Task5</Filter>
+    </ClCompile>
+    <ClCompile Include="Ch16\Task2\ex_2_16.cpp">
+      <Filter>Ch16\Task2</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -627,6 +633,15 @@
       <Filter>Ch16\My_classes_16</Filter>
     </ClInclude>
     <ClInclude Include="Ch16\My_classes_16\My_window_move.h">
+      <Filter>Ch16\My_classes_16</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch16\My_classes_16\MoveFigure.h">
+      <Filter>Ch16\My_classes_16</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch16\Task2\ex_2_16.h">
+      <Filter>Ch16\Task2</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch16\My_classes_16\Colored_button.h">
       <Filter>Ch16\My_classes_16</Filter>
     </ClInclude>
   </ItemGroup>

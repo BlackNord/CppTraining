@@ -4,8 +4,9 @@
 #include "../Ch16/Task3/ex_3_16.h"
 #include "../Ch16/Task4/ex_4_16.h"
 #include "../Ch16/Task5/ex_5_16.h"
+#include "../Ch16/Task2/ex_2_16.h"
 
-//5 | 2, 6, 7, 8, 9, 10
+//6, 7, 8, 9, 10
 
 int main() {
 	try {
@@ -13,7 +14,8 @@ int main() {
 		//ex_1_16();
 		//ex_3_16();
 		//ex_4_16();
-		ex_5_16();
+		//ex_5_16();
+		ex_2_16();
 	}
 	catch (const exception & ex) {
 		cout << "Error: " << ex.what() << endl;
