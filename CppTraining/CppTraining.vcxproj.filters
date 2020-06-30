@@ -202,6 +202,12 @@
     <Filter Include="Ch16\Task2">
       <UniqueIdentifier>{3396802a-6c72-45bb-a761-96fab1cb2e1d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Ch16\Task6">
+      <UniqueIdentifier>{4b5ef040-941e-426f-84b3-0c3e020a276c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ch16\Task7">
+      <UniqueIdentifier>{4567a006-17e6-4012-98c2-1bba3ed209ca}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Stroustruap_libs\Graph.cpp">
@@ -380,6 +386,12 @@
     </ClCompile>
     <ClCompile Include="Ch16\Task2\ex_2_16.cpp">
       <Filter>Ch16\Task2</Filter>
+    </ClCompile>
+    <ClCompile Include="Ch16\Task6\ex_6_16.cpp">
+      <Filter>Ch16\Task6</Filter>
+    </ClCompile>
+    <ClCompile Include="Ch16\Task7\ex_7_16.cpp">
+      <Filter>Ch16\Task7</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -643,6 +655,18 @@
     </ClInclude>
     <ClInclude Include="Ch16\My_classes_16\Colored_button.h">
       <Filter>Ch16\My_classes_16</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch16\Task6\ex_6_16.h">
+      <Filter>Ch16\Task6</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch16\My_classes_16\Clock.h">
+      <Filter>Ch16\My_classes_16</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch16\My_classes_16\Plane.h">
+      <Filter>Ch16\My_classes_16</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch16\Task7\ex_7_16.h">
+      <Filter>Ch16\Task7</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
