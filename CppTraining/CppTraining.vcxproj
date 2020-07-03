@@ -216,6 +216,7 @@
     <ClCompile Include="Ch16\Task5\ex_5_16.cpp" />
     <ClCompile Include="Ch16\Task6\ex_6_16.cpp" />
     <ClCompile Include="Ch16\Task7\ex_7_16.cpp" />
+    <ClCompile Include="Ch16\Task9\ex_9_16.cpp" />
     <ClCompile Include="Stroustruap_libs\Graph.cpp" />
     <ClCompile Include="Stroustruap_libs\GUI.cpp" />
     <ClCompile Include="Stroustruap_libs\Simple_window.cpp" />
@@ -292,6 +293,8 @@
     <ClInclude Include="Ch15\Task4\ex_4_15.h" />
     <ClInclude Include="Ch15\Task5\ex_5_15.h" />
     <ClInclude Include="Ch15\Task6-11\ex_6_11_15.h" />
+    <ClInclude Include="Ch16\My_classes_16\Calculator.h" />
+    <ClInclude Include="Ch16\My_classes_16\Calculator_back.h" />
     <ClInclude Include="Ch16\My_classes_16\Clock.h" />
     <ClInclude Include="Ch16\My_classes_16\Colored_button.h" />
     <ClInclude Include="Ch16\My_classes_16\GraphMenu.h" />
@@ -307,6 +310,7 @@
     <ClInclude Include="Ch16\Task5\ex_5_16.h" />
     <ClInclude Include="Ch16\Task6\ex_6_16.h" />
     <ClInclude Include="Ch16\Task7\ex_7_16.h" />
+    <ClInclude Include="Ch16\Task9\ex_9_16.h" />
     <ClInclude Include="Stroustruap_libs\Graph.h" />
     <ClInclude Include="Stroustruap_libs\GUI.h" />
     <ClInclude Include="Stroustruap_libs\Point.h" />

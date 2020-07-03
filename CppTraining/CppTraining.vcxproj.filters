@@ -208,6 +208,9 @@
     <Filter Include="Ch16\Task7">
       <UniqueIdentifier>{4567a006-17e6-4012-98c2-1bba3ed209ca}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Ch16\Task9">
+      <UniqueIdentifier>{0bb15ac7-6c1c-4ecf-abd5-d530557a7417}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Stroustruap_libs\Graph.cpp">
@@ -392,6 +395,9 @@
     </ClCompile>
     <ClCompile Include="Ch16\Task7\ex_7_16.cpp">
       <Filter>Ch16\Task7</Filter>
+    </ClCompile>
+    <ClCompile Include="Ch16\Task9\ex_9_16.cpp">
+      <Filter>Ch16\Task9</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -667,6 +673,15 @@
     </ClInclude>
     <ClInclude Include="Ch16\Task7\ex_7_16.h">
       <Filter>Ch16\Task7</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch16\Task9\ex_9_16.h">
+      <Filter>Ch16\Task9</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch16\My_classes_16\Calculator.h">
+      <Filter>Ch16\My_classes_16</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch16\My_classes_16\Calculator_back.h">
+      <Filter>Ch16\My_classes_16</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

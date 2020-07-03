@@ -7,8 +7,9 @@
 #include "../Ch16/Task2/ex_2_16.h"
 #include "../Ch16/Task6/ex_6_16.h"
 #include "../Ch16/Task7/ex_7_16.h"
+#include "../Ch16/Task9/ex_9_16.h"
 
-//7, 8, 9, 10
+//8, 10
 
 int main() {
 	try {
@@ -19,7 +20,8 @@ int main() {
 		//ex_5_16();
 		//ex_2_16();
 		//ex_6_16();
-		ex_7_16();
+		//ex_7_16();
+		ex_9_16();
 	}
 	catch (const exception & ex) {
 		cout << "Error: " << ex.what() << endl;
