@@ -9,8 +9,10 @@
 #include "../Ch16/Task7/ex_7_16.h"
 #include "../Ch16/Task9/ex_9_16.h"
 #include "../Ch16/Task8/ex_8_16.h"
+#include "../Ch16/Task10/ex_10_16.h"
 
-//8, 10
+// 8 fix setting_curses (to double)
+// 10
 
 int main() {
 	try {
@@ -23,7 +25,8 @@ int main() {
 		//ex_6_16();
 		//ex_7_16();
 		//ex_9_16();
-		ex_8_16();
+		//ex_8_16();
+		ex_10_16();
 	}
 	catch (const exception & ex) {
 		cout << "Error: " << ex.what() << endl;

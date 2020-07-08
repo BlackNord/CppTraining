@@ -208,6 +208,7 @@
     <ClCompile Include="Ch15\Task4\ex_4_15.cpp" />
     <ClCompile Include="Ch15\Task5\ex_5_15.cpp" />
     <ClCompile Include="Ch15\Task6-11\ex_6_11_15.cpp" />
+    <ClCompile Include="Ch16\Task10\ex_10_16.cpp" />
     <ClCompile Include="Ch16\Task1z\ex_1_16z.cpp" />
     <ClCompile Include="Ch16\Task1\ex_1_16.cpp" />
     <ClCompile Include="Ch16\Task2\ex_2_16.cpp" />
@@ -304,6 +305,8 @@
     <ClInclude Include="Ch16\My_classes_16\My_window.h" />
     <ClInclude Include="Ch16\My_classes_16\My_window_move.h" />
     <ClInclude Include="Ch16\My_classes_16\Plane.h" />
+    <ClInclude Include="Ch16\My_classes_16\Plot_builder.h" />
+    <ClInclude Include="Ch16\Task10\ex_10_16.h" />
     <ClInclude Include="Ch16\Task1z\ex_1_16z.h" />
     <ClInclude Include="Ch16\Task1\ex_1_16.h" />
     <ClInclude Include="Ch16\Task2\ex_2_16.h" />
