@@ -143,8 +143,8 @@ void Lines_window::quit() {
 }
 
 void Lines_window::next() {
-    int x = next_x.get_int();
-    int y = next_y.get_int();
+    int x = atoi(next_x.get_string().c_str());
+    int y = atoi(next_y.get_string().c_str());
     lines.add(Point{ x,y });
     ostringstream ss; 
     ss << '(' << x << ',' << y << ')'; 
