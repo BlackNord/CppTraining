@@ -2,6 +2,8 @@
 
 #include "../../Stroustruap_libs/GUI.h"
 
+// fix setting_curses (to double)
+
 class dollar {
     double euro, rub;
 public:
