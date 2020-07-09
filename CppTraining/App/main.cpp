@@ -11,6 +11,10 @@
 #include "../Ch16/Task8/ex_8_16.h"
 #include "../Ch16/Task10/ex_10_16.h"
 
+//---------------------------
+
+#include "../Ch17/Task1z/ex_1z_17.h"
+
 int main() {
 	try {
 		//ex_1_16z();
@@ -24,6 +28,11 @@ int main() {
 		//ex_9_16();
 		//ex_8_16();
 		//ex_10_16();
+
+		//---------------------
+		// 3, 4, 5, 7-8, 9, 11-14
+
+		ex_1z_17();
 	}
 	catch (const exception & ex) {
 		cout << "Error: " << ex.what() << endl;
@@ -33,6 +42,6 @@ int main() {
 		cout << "Unnown error\n";
 		keep_window_open();
 	}
-	//system("pause");
+	system("pause");
 	return 0;
 }
