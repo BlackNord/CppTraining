@@ -14,6 +14,9 @@
 //---------------------------
 
 #include "../Ch17/Task1z/ex_1z_17.h"
+#include "../Ch17/Task3/ex_3_17.h"
+#include "../Ch17/Task4/ex_4_17.h"
+#include "../Ch17/Task5/ex_5_17.h"
 
 int main() {
 	try {
@@ -22,7 +25,7 @@ int main() {
 		//ex_3_16();
 		//ex_4_16();
 		//ex_5_16();
-		ex_2_16();
+		//ex_2_16();
 		//ex_6_16();
 		//ex_7_16();
 		//ex_9_16();
@@ -30,9 +33,12 @@ int main() {
 		//ex_10_16();
 
 		//---------------------
-		// 3, 4, 5, 7-8, 9, 11-14
+		//7-8, 9, 11-14
 
 		//ex_1z_17();
+		//ex_3_17();
+		//ex_4_17();
+		ex_5_17();
 	}
 	catch (const exception & ex) {
 		cout << "Error: " << ex.what() << endl;

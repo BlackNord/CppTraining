@@ -62,4 +62,7 @@ void ex_1z_17() {
 
 	print_array(cout, arr1, 7);
 	print_array(cout, arr2, 7);
+
+	delete[] arr1;
+	delete[] arr2;
 }
