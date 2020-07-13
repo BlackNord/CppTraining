@@ -232,6 +232,15 @@
     <Filter Include="Ch17\Task5">
       <UniqueIdentifier>{0e1c979b-80ca-48ef-a005-58b657d3087a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Ch17\Task9">
+      <UniqueIdentifier>{535bb140-8e26-432f-93ec-b1d25e0acc1e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ch17\Task7-8">
+      <UniqueIdentifier>{27727e8e-e230-4591-9a97-109717c19eb3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ch17\Task11-14">
+      <UniqueIdentifier>{8468d39f-bdac-4894-9580-7bc9048f8c39}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Stroustruap_libs\Graph.cpp">
@@ -437,6 +446,15 @@
     </ClCompile>
     <ClCompile Include="Ch17\Task5\ex_5_17.cpp">
       <Filter>Ch17\Task5</Filter>
+    </ClCompile>
+    <ClCompile Include="Ch17\Task9\ex_9_17.cpp">
+      <Filter>Ch17\Task9</Filter>
+    </ClCompile>
+    <ClCompile Include="Ch17\Task7-8\ex_7_8_17.cpp">
+      <Filter>Ch17\Task7-8</Filter>
+    </ClCompile>
+    <ClCompile Include="Ch17\Task11-14\ex_11_14_17.cpp">
+      <Filter>Ch17\Task11-14</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -745,6 +763,18 @@
     </ClInclude>
     <ClInclude Include="Ch17\Task5\ex_5_17.h">
       <Filter>Ch17\Task5</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch17\Task9\ex_9_17.h">
+      <Filter>Ch17\Task9</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch17\Task7-8\ex_7_8_17.h">
+      <Filter>Ch17\Task7-8</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch17\Task11-14\ex_11_14_17.h">
+      <Filter>Ch17\Task11-14</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch17\Task11-14\list.h">
+      <Filter>Ch17\Task11-14</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
