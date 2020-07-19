@@ -2,14 +2,11 @@
 #include "../../Stroustruap_libs/std_lib_facilities_4.h"
 
 void to_lower(char* s) {
-    for (int i = 0; s[i] != '\0'; i++) {
+    while (true) {
         if (*s == '\0')
             break;
-        if (*s == ' ') {
-            *s++;
-        }
-        if ((int)(*s) >= 65 and (int)(*s) <= 90) {
-            *s = (char)((int)(*s) + 32);
+        if (*s >= 'A' and *s <= 'Z') {
+            *s = *s + ('a' - 'A');
         }
         *s++;
     }

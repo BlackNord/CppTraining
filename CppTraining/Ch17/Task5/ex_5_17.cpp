@@ -23,13 +23,23 @@ int findx(const char* s, const char* x) {
 	return -1;
 }
 
+int find_x(const char* s, const char* x) {
+	for (int str{ 0 }; s[str]; ++str) {
+		for (int ex{ 0 };; ++ex) {
+			if (!x[ex]) return str; 
+			if (s[str + ex] != x[ex]) break;
+		}
+	}
+	return -1;
+}
+
 void ex_5_17() {
 	char first[] = { "Hello, world!" };
 	char second[] = { "lo" };
 	char third[] = { "wor" };
 	char fourth[] = { "wore" };
 
-	cout << findx(first, second) << endl;
-	cout << findx(first, third) << endl;
-	cout << findx(first, fourth) << endl;
+	cout << find_x(first, second) << endl;
+	cout << find_x(first, third) << endl;
+	cout << find_x(first, fourth) << endl;
 }

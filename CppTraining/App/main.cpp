@@ -39,11 +39,11 @@ int main() {
 
 		//ex_1z_17();
 		//ex_3_17();
-		//ex_4_17();
+		ex_4_17();
 		//ex_5_17();
 		//ex_9_17();
 		//ex_7_8_17();
-		ex_11_14_17();
+		//ex_11_14_17();
 	}
 	catch (const exception & ex) {
 		cout << "Error: " << ex.what() << endl;
