@@ -226,6 +226,7 @@
     <ClCompile Include="Ch17\Task5\ex_5_17.cpp" />
     <ClCompile Include="Ch17\Task7-8\ex_7_8_17.cpp" />
     <ClCompile Include="Ch17\Task9\ex_9_17.cpp" />
+    <ClCompile Include="Ch18\Task1-4\ex_1_4_18.cpp" />
     <ClCompile Include="Ch18\Task1z\ex_1z_18.cpp" />
     <ClCompile Include="Stroustruap_libs\Graph.cpp" />
     <ClCompile Include="Stroustruap_libs\GUI.cpp" />
@@ -333,6 +334,7 @@
     <ClInclude Include="Ch17\Task5\ex_5_17.h" />
     <ClInclude Include="Ch17\Task7-8\ex_7_8_17.h" />
     <ClInclude Include="Ch17\Task9\ex_9_17.h" />
+    <ClInclude Include="Ch18\Task1-4\ex_1_4_18.h" />
     <ClInclude Include="Ch18\Task1z\ex_1z_18.h" />
     <ClInclude Include="Stroustruap_libs\Graph.h" />
     <ClInclude Include="Stroustruap_libs\GUI.h" />
