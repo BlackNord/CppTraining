@@ -26,6 +26,15 @@ int find_x_18(const char* s, const char* x) {
 	return -1;
 }
 
+int strcmp_18(const char* str1, const char* str2) {
+	while (*str1 && *str2) {
+		if (*str1 < *str2) return -1;
+		if (*str1 > *str2) return 1;
+		++str1; ++str2;
+	}
+	return *str1 ? -1 : *str2 ? 1 : 0;
+}
+
 void ex_1_4_18() {
 	char first[] = { "Hello, world!" };
 	char second[] = { "lo" };
@@ -35,6 +44,9 @@ void ex_1_4_18() {
 	cout << find_x_18(first, second) << endl;
 	cout << find_x_18(first, third) << endl;
 	cout << find_x_18(first, fourth) << endl;
+
+	cout << strcmp_18(first, second) << endl;
+	cout << strcmp_18("lo", "lo") << endl;
 
 	char str[] = { "Hello, World!" };
 	cout << str << endl;
