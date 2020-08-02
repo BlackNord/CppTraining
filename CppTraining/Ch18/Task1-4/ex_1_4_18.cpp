@@ -50,5 +50,19 @@ void ex_1_4_18() {
 
 	char str[] = { "Hello, World!" };
 	cout << str << endl;
-	cout << str_dup_18(str) << endl;
+	char* temp = str_dup_18(str);
+	cout << temp << endl;
+	delete[] temp;
+
+	//--
+
+	char fake[1] = { '1' };
+	char* fp = str_dup_18(fake);
+	cout << fp << endl;
+	delete[] fp;
+
+	char not_fake[2] = { "2" };		// \0 - automatic
+	char* nfp = str_dup_18(not_fake);
+	cout << nfp << endl;
+	delete[] nfp;
 }

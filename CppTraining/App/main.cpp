@@ -2,13 +2,15 @@
 
 #include "../Ch18/Task1z/ex_1z_18.h"
 #include "../Ch18/Task1-4/ex_1_4_18.h"
+#include "../Ch18/Task5-7/ex_5_7_18.h"
 
-// 4, (5, 6, 7), 8, 9, 10, 11, 12 
+// 8, 9, 10, 11, 12 
 
 int main() {
 	try {
 		// ex_1z_18();
-		ex_1_4_18();
+		// ex_1_4_18();
+		// ex_5_7_18();
 	}
 	catch (const exception & ex) {
 		cout << "Error: " << ex.what() << endl;
