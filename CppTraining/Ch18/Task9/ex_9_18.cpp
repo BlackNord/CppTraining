@@ -3,29 +3,52 @@
 
 void stack_test() {
 	cout << "Stack\n";
-	int n{ 10 };
-	char* stack = new char[n];
 
-	for (int i{ 0 }; i < n; ++i) {
+	char stack[10];
+	for (int i{ 0 }; i < 10; ++i) {
 		stack[i] = 'w';
 	}
-	stack[n - 1] = '\0';
+	stack[9] = '\0';
 
-	for (int i{ 0 }; i < n; ++i) {
+	for (int i{ 0 }; i < 10; ++i) {
 		cout << &stack + i << endl;
 	}
-
-	delete[] stack;
 }
 
 void static_test() {
+	cout << "Static\n";
 
+	static char stat[10];
+	for (int i{ 0 }; i < 10; ++i) {
+		stat[i] = 'w';
+	}
+	stat[9] = '\0';
+
+	for (int i{ 0 }; i < 10; ++i) {
+		cout << &stat + i << endl;
+	}
 }
 
 void dynamic_test() {
+	cout << "Dynamic\n";
 
+	int n{ 10 };
+	char* dynamic = new char[n];
+
+	for (int i{ 0 }; i < n; ++i) {
+		dynamic[i] = 'w';
+	}
+	dynamic[n - 1] = '\0';
+
+	for (int i{ 0 }; i < n; ++i) {
+		cout << &dynamic + i << endl;
+	}
+
+	delete[] dynamic;
 }
 
 void ex_9_18() {
 	stack_test();
+	dynamic_test();
+	static_test();
 }
