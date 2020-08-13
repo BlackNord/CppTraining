@@ -842,6 +842,9 @@
     <ClInclude Include="Ch18\Task11\ex_11_18.h">
       <Filter>Ch18\Task11</Filter>
     </ClInclude>
+    <ClInclude Include="Ch18\Task11\skip_list.h">
+      <Filter>Ch18\Task11</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Resourses\1.jpg">
