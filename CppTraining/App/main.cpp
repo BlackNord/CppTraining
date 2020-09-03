@@ -6,8 +6,8 @@
 #include "../Ch18/Task10/ex_10_18.h"
 #include "../Ch18/Task9/ex_9_18.h"
 #include "../Ch18/Task11/ex_11_18.h"
-
-// 12 
+#include "../Ch18/Task12/ex_12_18.h"
+#include "../Ch18/RAII_test/raii_test.h"
 
 int main() {
 	try {
@@ -18,6 +18,8 @@ int main() {
 		// ex_10_18();
 		// ex_9_18();
 		// ex_11_18();
+		ex_12_18();
+		// raii_test();
 	}
 	catch (const exception & ex) {
 		cout << "Error: " << ex.what() << endl;

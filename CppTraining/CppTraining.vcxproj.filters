@@ -265,6 +265,12 @@
     <Filter Include="Ch18\Task11">
       <UniqueIdentifier>{a7423a71-d625-4f66-99f6-88e643ad3460}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Ch18\Task12">
+      <UniqueIdentifier>{48cbcdb3-07cd-4c94-8c88-044a389fbe17}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ch18\RAII_test">
+      <UniqueIdentifier>{2bbb76d6-5bff-40df-81b4-02b01c4cbf51}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Stroustruap_libs\Graph.cpp">
@@ -500,6 +506,12 @@
     </ClCompile>
     <ClCompile Include="Ch18\Task11\ex_11_18.cpp">
       <Filter>Ch18\Task11</Filter>
+    </ClCompile>
+    <ClCompile Include="Ch18\Task12\ex_12_18.cpp">
+      <Filter>Ch18\Task12</Filter>
+    </ClCompile>
+    <ClCompile Include="Ch18\RAII_test\raii_test.cpp">
+      <Filter>Ch18\RAII_test</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -844,6 +856,12 @@
     </ClInclude>
     <ClInclude Include="Ch18\Task11\skip_list.h">
       <Filter>Ch18\Task11</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch18\Task12\ex_12_18.h">
+      <Filter>Ch18\Task12</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch18\RAII_test\raii_test.h">
+      <Filter>Ch18\RAII_test</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

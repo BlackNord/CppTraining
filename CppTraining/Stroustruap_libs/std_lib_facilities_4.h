@@ -123,7 +123,7 @@ template< class T> struct Vector : public std::vector<T> {
 };
 
 // disgusting macro hack to get a range checked vector:
-#define vector Vector
+//#define vector Vector										// !!! edit 1.09.2020
 
 // trivially range-checked string (no iterator checking):
 struct String : std::string {
