@@ -18,8 +18,8 @@ int main() {
 		// ex_10_18();
 		// ex_9_18();
 		// ex_11_18();
-		ex_12_18();
-		// raii_test();
+		// ex_12_18();
+		raii_test();
 	}
 	catch (const exception & ex) {
 		cout << "Error: " << ex.what() << endl;

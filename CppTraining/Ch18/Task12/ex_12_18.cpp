@@ -86,6 +86,10 @@ namespace Vamp {
     public:
         Player() : alive{ true }, arrows{ 5 } {}
 
+        Room get_room() {
+            return room;
+        }
+
         void shot() {
             if (arrows > 0) {
                 arrows--;
@@ -94,6 +98,7 @@ namespace Vamp {
 
         void kill() {
             alive = false;
+            //cout << "You are DEAD\n";
         }
 
         void set_room(Room _room) {
@@ -259,6 +264,42 @@ namespace Vamp {
         Game() {
             player.set_room(cave.get_room(0));
         }
+
+        void playing() {
+            while (true) {
+                vector<int> nums{};
+                string action{};
+
+                cout << "Room #" << player.get_room().get_number() << endl;
+                cout << "Neighbours are: ";
+
+                for (int i{ 0 }; i < player.get_room().get_neighbour().size(); ++i) {
+                    int k = player.get_room().get_neighbour()[i]->get_number();
+                    cout << k << " ";
+                    nums.push_back(k);
+                }
+                cout << "\n>";
+
+                cin >> action;
+
+                if (action[0] == 'm') {
+                    string temp;
+                    for (int i{ 1 }; i < action.size(); ++i) {
+                        temp.push_back(action[i]);
+                    }
+                    int num = atoi(temp.c_str());
+
+                    bool marker{ false };
+                    for (auto k : nums) {
+                        if (num == k) marker = true;
+                    }
+
+                    if(!marker) cout << "Wrong way, my friend!\n";
+                    else player.move_to(num);
+                }
+            }
+        }
+
     private:
         Player player;
         Cave cave;
@@ -268,6 +309,7 @@ namespace Vamp {
 
 void ex_12_18() {
     Vamp::Game g;
+    g.playing();
 
     cout << "Test" << endl;
 }

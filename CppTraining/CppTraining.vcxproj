@@ -361,6 +361,10 @@
   <ItemGroup>
     <Image Include="Resourses\1.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="Ch18\RAII_test\0.txt" />
+    <Text Include="Ch18\RAII_test\1.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

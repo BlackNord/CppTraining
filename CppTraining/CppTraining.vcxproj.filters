@@ -869,4 +869,12 @@
       <Filter>Файлы ресурсов</Filter>
     </Image>
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="Ch18\RAII_test\0.txt">
+      <Filter>Ch18\RAII_test</Filter>
+    </Text>
+    <Text Include="Ch18\RAII_test\1.txt">
+      <Filter>Ch18\RAII_test</Filter>
+    </Text>
+  </ItemGroup>
 </Project>
