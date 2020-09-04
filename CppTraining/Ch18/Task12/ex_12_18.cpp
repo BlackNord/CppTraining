@@ -7,7 +7,7 @@
 #include <chrono>
 
 namespace Vamp {
-    int rand_dip(int up, int down) {
+    int rand_dip(int up, int down) {                    // random int of some diapazon
         std::random_device rd;
         std::mt19937 mt(rd());
         std::uniform_int_distribution<int> dist(up, down);
@@ -82,58 +82,6 @@ namespace Vamp {
         vector<Room*> neighbours;
     };
 
-    class Player {
-    public:
-        Player() : alive{ true }, arrows{ 5 } {}
-
-        Room get_room() {
-            return room;
-        }
-
-        void shot() {
-            if (arrows > 0) {
-                arrows--;
-            }
-        }
-
-        void kill() {
-            alive = false;
-            //cout << "You are DEAD\n";
-        }
-
-        void set_room(Room _room) {
-            room = _room;
-        }
-
-        void move_to(int pos) {
-            for (int i{ 0 }; i < 3; ++i) {
-                auto temp = room.get_neighbour();
-                if (pos == (*temp[i]).get_number()) {
-                    room = *temp[i];
-                    do_from();
-                }
-            }
-        }
-
-        void do_from() {
-            if (room.get_bat()) {
-                int d_ist = rand_dip(1, 20);
-                move_to(d_ist);
-            }
-            if (room.get_pit()) {
-                kill();
-            }
-            if (room.get_vamp()) {
-                kill();
-            }
-        }
-
-    private:
-        bool alive;
-        int arrows;
-        Room room;
-    };
-
     class Cave {
     public:
         Cave() : num_of_rooms{ 20 }, num_of_bats{ 5 }, num_of_pits{ 5 } {
@@ -144,17 +92,22 @@ namespace Vamp {
             }
 
             generate_neighbours();
-
             num_generate();
-
             mobs_generate();
-
             vamp_generate();
         }
 
-        Room get_room(int pos) {
+        Room get_room_wpos(int pos) {
             return cave[pos];
         }
+
+        Room get_true_room(int pos) {
+            for (auto k : cave) {
+                if (k.get_number() == pos) return k;
+            }
+        }
+
+        static Cave* cave_p;
 
     private:
         vector<Room> cave;
@@ -163,9 +116,10 @@ namespace Vamp {
         int num_of_rooms;
 
         void vamp_generate() {
-            for (int i{ 1 }; i < cave.size(); ++i) {
-                if (!cave[i].get_bat() and !cave[i].get_pit()) {
-                    cave[i].set_vamp(true);
+            while (true) {
+                int room = rand_dip(2, 20);
+                if (!cave[room].get_bat() and !cave[room].get_pit()) {
+                    cave[room].set_vamp(true);
                     return;
                 }
             }
@@ -217,7 +171,7 @@ namespace Vamp {
             for (int i{ 0 }; i < num_of_bats; ++i) {
                 while (true) {
                     int room = rand_dip(1, 19);
-                    if (check_room_b(room)) {
+                    if (check_room_b(room) and !cave[room].get_pit()) {
                         cave[room].set_bat(true);
                         break;
                     }
@@ -227,7 +181,7 @@ namespace Vamp {
             for (int i{ 0 }; i < num_of_pits; ++i) {
                 while (true) {
                     int room = rand_dip(1, 19);
-                    if (check_room_p(room)) {
+                    if (check_room_p(room) and !cave[room].get_bat()) {
                         cave[room].set_pit(true);
                         break;
                     }
@@ -235,7 +189,7 @@ namespace Vamp {
             }
         }
 
-        void generate_neighbours() {
+        void generate_neighbours() {                                        // generate "the skeleton" of the cave
             cave[0].set_ptr(cave[1].ptr(), cave[4].ptr(), cave[7].ptr());
             cave[1].set_ptr(cave[0].ptr(), cave[2].ptr(), cave[9].ptr());
             cave[2].set_ptr(cave[1].ptr(), cave[3].ptr(), cave[11].ptr());
@@ -259,43 +213,124 @@ namespace Vamp {
         }
     };
 
-    class Game {
+    Cave* Cave::cave_p = 0;
+
+    class Player {
     public:
-        Game() {
-            player.set_room(cave.get_room(0));
+        Player() : alive{ true }, arrows{ 5 } {}
+
+        Room get_room() {
+            return room;
         }
 
-        void playing() {
+        void shot() {
+            if (arrows > 0) {
+                arrows--;
+            }
+        }
+
+        void kill() {
+            alive = false;
+            cout << "You are DEAD\n";
+        }
+
+        void set_room(Room _room) {
+            room = _room;
+        }
+
+        void move_to(int pos) {                     // player - with neighbours
+            for (int i{ 0 }; i < 3; ++i) {
+                auto temp = room.get_neighbour();
+                if (pos == (*temp[i]).get_number()) {
+                    room = *temp[i];
+                    do_from();
+                }
+            }
+        }
+
+        void move(int pos) {                        // absolute move with bats
+            room = Cave::cave_p->get_true_room(pos);
+        }
+
+        void do_from() {
+            if (room.get_bat()) {
+                int d_ist = rand_dip(1, 20);
+                cout << "Bats move to " << d_ist << endl;
+                move(d_ist);
+            }
+            if (room.get_pit()) {
+                kill();
+                cout << "Pit\n";
+            }
+            if (room.get_vamp()) {
+                kill();
+                cout << "Vamp\n";
+            }
+        }
+
+        bool is_alive() {
+            return alive;
+        }
+
+    private:
+        bool alive;
+        int arrows;
+        Room room;
+    };
+
+    class Game {
+    public:
+        Game() {                                    // start room with player
+            player.set_room(cave.get_room_wpos(0));
+            Cave::cave_p = &cave;                   // singleton
+        }
+
+        void predictiong(const vector<int>& nums) {
+            for (auto k : nums) {
+                if (cave.get_true_room(k).get_bat()) cout << "\nSomewhere is bat";
+                if (cave.get_true_room(k).get_pit()) cout << "\nSomewhere is pit";
+                if (cave.get_true_room(k).get_vamp()) cout << "\nSomewhere is vamp";
+            }
+        }
+
+        void playing() {                            // main playing function
             while (true) {
+                if (!player.is_alive()) {           // player must be alive
+                    cout << "Game is over\n";
+                    break;
+                }
                 vector<int> nums{};
                 string action{};
 
                 cout << "Room #" << player.get_room().get_number() << endl;
                 cout << "Neighbours are: ";
 
-                for (int i{ 0 }; i < player.get_room().get_neighbour().size(); ++i) {
+                for (int i{ 0 }; i < player.get_room().get_neighbour().size(); ++i) {   // getting the numbers of the neighbours
                     int k = player.get_room().get_neighbour()[i]->get_number();
                     cout << k << " ";
                     nums.push_back(k);
                 }
+
+                predictiong(nums);
+
                 cout << "\n>";
 
-                cin >> action;
+                cin >> action;                                      // set the control string
 
                 if (action[0] == 'm') {
                     string temp;
-                    for (int i{ 1 }; i < action.size(); ++i) {
+                    for (int i{ 1 }; i < action.size(); ++i) {      // get the number of the control string
                         temp.push_back(action[i]);
                     }
-                    int num = atoi(temp.c_str());
+                    int num = atoi(temp.c_str());                   // convert to int
 
-                    bool marker{ false };
+                    bool marker{ false };                           // checking that number of out room is the number of the neighbours
                     for (auto k : nums) {
                         if (num == k) marker = true;
                     }
 
-                    if(!marker) cout << "Wrong way, my friend!\n";
-                    else player.move_to(num);
+                    if(!marker) cout << "Wrong way, my friend!\n";      // if not - error-mass
+                    else player.move_to(num);                          // if all is good - move
                 }
             }
         }
@@ -310,6 +345,4 @@ namespace Vamp {
 void ex_12_18() {
     Vamp::Game g;
     g.playing();
-
-    cout << "Test" << endl;
 }
