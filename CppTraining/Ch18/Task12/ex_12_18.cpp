@@ -6,6 +6,11 @@
 #include <random>
 #include <chrono>
 
+// задать "движение" стрелы по вектору из номера комнат - чекаем "соседские" связи между ними по пути
+// если в комнате есть вамп - убиваем и заканчиваем игру "Победа"
+// если в соседней от "простреленной в холостую" комнаты есть вамп - перемещаем его в одного из 3 соседей
+// и чекаем состояние игрока при перемещении вампа. Если совпало - смерть
+
 namespace Vamp {
     int rand_dip(int up, int down) {                    // random int of some diapazon
         std::random_device rd;
@@ -248,9 +253,18 @@ namespace Vamp {
             }
         }
 
-        void move(int pos) {                        // absolute move with bats
-            room = Cave::cave_p->get_true_room(pos);
+        bool is_alive() {
+            return alive;
         }
+
+        int get_arrows() {
+            return arrows;
+        }
+
+    private:
+        bool alive;
+        int arrows;
+        Room room;
 
         void do_from() {
             if (room.get_bat()) {
@@ -268,14 +282,9 @@ namespace Vamp {
             }
         }
 
-        bool is_alive() {
-            return alive;
+        void move(int pos) {                        // absolute move with bats
+            room = Cave::cave_p->get_true_room(pos);
         }
-
-    private:
-        bool alive;
-        int arrows;
-        Room room;
     };
 
     class Game {
@@ -285,15 +294,9 @@ namespace Vamp {
             Cave::cave_p = &cave;                   // singleton
         }
 
-        void predictiong(const vector<int>& nums) {
-            for (auto k : nums) {
-                if (cave.get_true_room(k).get_bat()) cout << "\nSomewhere is bat";
-                if (cave.get_true_room(k).get_pit()) cout << "\nSomewhere is pit";
-                if (cave.get_true_room(k).get_vamp()) cout << "\nSomewhere is vamp";
-            }
-        }
-
         void playing() {                            // main playing function
+            help();
+
             while (true) {
                 if (!player.is_alive()) {           // player must be alive
                     cout << "Game is over\n";
@@ -303,6 +306,7 @@ namespace Vamp {
                 string action{};
 
                 cout << "Room #" << player.get_room().get_number() << endl;
+                cout << "Arrows: " << player.get_arrows() << endl;
                 cout << "Neighbours are: ";
 
                 for (int i{ 0 }; i < player.get_room().get_neighbour().size(); ++i) {   // getting the numbers of the neighbours
@@ -330,7 +334,25 @@ namespace Vamp {
                     }
 
                     if(!marker) cout << "Wrong way, my friend!\n";      // if not - error-mass
-                    else player.move_to(num);                          // if all is good - move
+                    else player.move_to(num);                           // if all is good - move
+                }
+
+                if (action[0] == 's') {
+                    if (player.get_arrows() > 0) {
+                        vector<int> path;
+
+                        for (int j{ 1 }, counter{ 0 }; counter != 3; ++counter) {
+                            string temp;
+                            for (int i{ j }; action[i] != '-' and i != action.size(); ++i) {
+                                temp.push_back(action[i]);
+                            }
+                            path.push_back(atoi(temp.c_str()));
+                            j += temp.size()+1;
+                        }
+                    }
+                    else {
+                        cout << "No arrows\n";
+                    }
                 }
             }
         }
@@ -338,6 +360,22 @@ namespace Vamp {
     private:
         Player player;
         Cave cave;
+
+        void predictiong(const vector<int>& nums) {
+            for (auto k : nums) {
+                if (cave.get_true_room(k).get_bat()) cout << "\nSomewhere is bat";
+                if (cave.get_true_room(k).get_pit()) cout << "\nSomewhere is pit";
+                if (cave.get_true_room(k).get_vamp()) cout << "\nSomewhere is vamp";
+            }
+        }
+
+        void help() {
+            cout << "----------------------------------------------------------------------------------\n";
+            cout << "To move enter 'mN', where 'N' is number of the room\n";
+            cout << "To shoot enter 'sN' or 'sN1-N2' or 'sN1-N2-N3', where 'Nx' is number of the room\n";
+            cout << "----------------------------------------------------------------------------------\n";
+        }
+
     };
 
 }

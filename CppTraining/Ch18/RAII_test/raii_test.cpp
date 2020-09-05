@@ -57,8 +57,8 @@ private:
 
 void raii_test() {
     try {
-        // Reader obj;
-        Reader1 obj;
+        Reader obj;
+        // Reader1 obj;
         obj.testing();
     }
     catch (const exception& ex) {
