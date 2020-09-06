@@ -6,11 +6,6 @@
 #include <random>
 #include <chrono>
 
-// задать "движение" стрелы по вектору из номера комнат - чекаем "соседские" связи между ними по пути
-// если в комнате есть вамп - убиваем и заканчиваем игру "Победа"
-// если в соседней от "простреленной в холостую" комнаты есть вамп - перемещаем его в одного из 3 соседей
-// и чекаем состояние игрока при перемещении вампа. Если совпало - смерть
-
 namespace Vamp {
     int rand_dip(int up, int down) {                    // random int of some diapazon
         std::random_device rd;
@@ -30,8 +25,46 @@ namespace Vamp {
             }
         }
 
+        bool is_shooted() {
+            if (get_vamp()) {
+                cout << "Vamp is killed!\n";
+                return true;
+            }
+            else {
+                for (int i{ 0 }; i < num_of_neighbours; ++i) {
+                    if (neighbours[i]->get_vamp()) {
+                        int number = rand_dip(0, 2);
+                        neighbours[i]->set_vamp(false);
+                        neighbours[i]->neighbours[number]->set_vamp(true);
+                    }
+                }
+            }
+            return false;
+        }
+
+        void upping_vamp() {
+            for (int i{ 0 }; i < num_of_neighbours; ++i) {
+                if (neighbours[i]->get_vamp()) {
+                    int number = rand_dip(0, 2);
+                    neighbours[i]->set_vamp(false);
+                    neighbours[i]->neighbours[number]->set_vamp(true);
+                }
+            }
+        }
+
         Room* ptr() {
             return this;
+        }
+
+        vector<int> nums_of_neighbours() {
+            vector<int> nums{};
+
+            for (int i{ 0 }; i < get_neighbour().size(); ++i) {
+                int k = get_neighbour()[i]->get_number();
+                nums.push_back(k);
+            }
+
+            return nums;
         }
 
         void set_ptr(Room* first, Room* second, Room* third) {
@@ -309,10 +342,9 @@ namespace Vamp {
                 cout << "Arrows: " << player.get_arrows() << endl;
                 cout << "Neighbours are: ";
 
-                for (int i{ 0 }; i < player.get_room().get_neighbour().size(); ++i) {   // getting the numbers of the neighbours
-                    int k = player.get_room().get_neighbour()[i]->get_number();
+                nums = player.get_room().nums_of_neighbours();
+                for (auto k : nums) {
                     cout << k << " ";
-                    nums.push_back(k);
                 }
 
                 predictiong(nums);
@@ -322,38 +354,62 @@ namespace Vamp {
                 cin >> action;                                      // set the control string
 
                 if (action[0] == 'm') {
-                    string temp;
-                    for (int i{ 1 }; i < action.size(); ++i) {      // get the number of the control string
-                        temp.push_back(action[i]);
-                    }
-                    int num = atoi(temp.c_str());                   // convert to int
-
-                    bool marker{ false };                           // checking that number of out room is the number of the neighbours
-                    for (auto k : nums) {
-                        if (num == k) marker = true;
-                    }
-
-                    if(!marker) cout << "Wrong way, my friend!\n";      // if not - error-mass
-                    else player.move_to(num);                           // if all is good - move
-                }
-
-                if (action[0] == 's') {
-                    if (player.get_arrows() > 0) {
-                        vector<int> path;
-
-                        for (int j{ 1 }, counter{ 0 }; counter != 3; ++counter) {
-                            string temp;
-                            for (int i{ j }; action[i] != '-' and i != action.size(); ++i) {
-                                temp.push_back(action[i]);
-                            }
-                            path.push_back(atoi(temp.c_str()));
-                            j += temp.size()+1;
+                    if (action.size() > 3 or action.size() < 2) cout << "Wrong command\n";
+                    else {
+                        string temp;
+                        for (int i{ 1 }; i < action.size(); ++i) {      // get the number of the control string
+                            temp.push_back(action[i]);
                         }
+                        int num = atoi(temp.c_str());                   // convert to int
+
+                        bool marker{ false };                           // checking that number of out room is the number of the neighbours
+                        for (auto k : nums) {
+                            if (num == k) marker = true;
+                        }
+
+                        if (!marker) cout << "Wrong way, my friend!\n";      // if not - error-mass
+                        else player.move_to(num);                           // if all is good - move
+                    }
+                }
+                else if (action[0] == 's') {
+                    if (action.size() < 6 or action.size() > 9) {
+                        cout << "Wrong path!\n";
                     }
                     else {
-                        cout << "No arrows\n";
+                        if (player.get_arrows() > 0) {
+                            vector<int> path;
+                            for (int j{ 1 }, counter{ 0 }; counter != 3; ++counter) {
+                                string temp;
+                                for (int i{ j }; action[i] != '-' and i != action.size(); ++i) {
+                                    temp.push_back(action[i]);
+                                }
+                                path.push_back(atoi(temp.c_str()));
+                                j += temp.size() + 1;
+                            }
+
+                            player.shot();
+
+                            Room room_temp = player.get_room();
+                            for (int i{ 0 }; i < path.size(); ++i) {
+                                nums = room_temp.nums_of_neighbours();
+                                for (auto k : nums) {
+                                    if (k == path[i]) {
+                                        room_temp = Cave::cave_p->get_true_room(path[i]);
+                                        bool marker{ false };
+                                        marker = room_temp.is_shooted();
+                                        if (marker) return;
+                                        player.get_room().upping_vamp();
+                                        player.move_to(player.get_room().get_number());
+                                    }
+                                }
+                            }
+                        }
+                        else {
+                            cout << "No arrows\n";
+                        }
                     }
                 }
+                else cout << "Wrong command!\n";
             }
         }
 
@@ -370,14 +426,12 @@ namespace Vamp {
         }
 
         void help() {
-            cout << "----------------------------------------------------------------------------------\n";
+            cout << "---------------------------------------------------------------\n";
             cout << "To move enter 'mN', where 'N' is number of the room\n";
-            cout << "To shoot enter 'sN' or 'sN1-N2' or 'sN1-N2-N3', where 'Nx' is number of the room\n";
-            cout << "----------------------------------------------------------------------------------\n";
+            cout << "To shoot enter 'sN1-N2-N3', where 'Nx' is number of the room\n";
+            cout << "---------------------------------------------------------------\n";
         }
-
     };
-
 }
 
 void ex_12_18() {
