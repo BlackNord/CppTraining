@@ -1,25 +1,12 @@
 #include "../Stroustruap_libs/std_lib_facilities_4.h"
 
-#include "../Ch18/Task1z/ex_1z_18.h"
-#include "../Ch18/Task1-4/ex_1_4_18.h"
-#include "../Ch18/Task5-7/ex_5_7_18.h"
-#include "../Ch18/Task10/ex_10_18.h"
-#include "../Ch18/Task9/ex_9_18.h"
-#include "../Ch18/Task11/ex_11_18.h"
-#include "../Ch18/Task12/ex_12_18.h"
-#include "../Ch18/RAII_test/raii_test.h"
+#include "../Ch19/Task6z/ex_6z_19.h"
+
+// task6, (2,4), 5, (6,8,9-10), 7, 11, 12-13, 14, 15, 16, 17, 18, 19, 20
 
 int main() {
 	try {
-		// ex_1z_18();
-		// ex_1_4_18();
-		// ex_5_7_18();
-		// ex_8_18();
-		// ex_10_18();
-		// ex_9_18();
-		// ex_11_18();
-		ex_12_18();
-		// raii_test();
+		ex_6z_19();
 	}
 	catch (const exception & ex) {
 		cout << "Error: " << ex.what() << endl;
