@@ -274,8 +274,8 @@
     <Filter Include="Ch19">
       <UniqueIdentifier>{baf1261f-957f-4b90-9c1f-d913d6696471}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Ch19\Task6z">
-      <UniqueIdentifier>{f21be713-731d-424a-8cea-ff5a19babb89}</UniqueIdentifier>
+    <Filter Include="Ch19\Task1z">
+      <UniqueIdentifier>{d0c5695a-978a-4cf8-b6aa-878d333dab00}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -519,8 +519,8 @@
     <ClCompile Include="Ch18\RAII_test\raii_test.cpp">
       <Filter>Ch18\RAII_test</Filter>
     </ClCompile>
-    <ClCompile Include="Ch19\Task6z\ex_6z_19.cpp">
-      <Filter>Ch19\Task6z</Filter>
+    <ClCompile Include="Ch19\Task1z\ex_1z_19.cpp">
+      <Filter>Ch19\Task1z</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -872,8 +872,8 @@
     <ClInclude Include="Ch18\RAII_test\raii_test.h">
       <Filter>Ch18\RAII_test</Filter>
     </ClInclude>
-    <ClInclude Include="Ch19\Task6z\ex_6z_19.h">
-      <Filter>Ch19\Task6z</Filter>
+    <ClInclude Include="Ch19\Task1z\ex_1z_19.h">
+      <Filter>Ch19\Task1z</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

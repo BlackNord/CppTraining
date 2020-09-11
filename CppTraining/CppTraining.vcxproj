@@ -235,7 +235,7 @@
     <ClCompile Include="Ch18\Task5-7\ex_5_7_18.cpp" />
     <ClCompile Include="Ch18\Task8\ex_8_18.cpp" />
     <ClCompile Include="Ch18\Task9\ex_9_18.cpp" />
-    <ClCompile Include="Ch19\Task6z\ex_6z_19.cpp" />
+    <ClCompile Include="Ch19\Task1z\ex_1z_19.cpp" />
     <ClCompile Include="Stroustruap_libs\Graph.cpp" />
     <ClCompile Include="Stroustruap_libs\GUI.cpp" />
     <ClCompile Include="Stroustruap_libs\Simple_window.cpp" />
@@ -352,7 +352,7 @@
     <ClInclude Include="Ch18\Task5-7\ex_5_7_18.h" />
     <ClInclude Include="Ch18\Task8\ex_8_18.h" />
     <ClInclude Include="Ch18\Task9\ex_9_18.h" />
-    <ClInclude Include="Ch19\Task6z\ex_6z_19.h" />
+    <ClInclude Include="Ch19\Task1z\ex_1z_19.h" />
     <ClInclude Include="Stroustruap_libs\Graph.h" />
     <ClInclude Include="Stroustruap_libs\GUI.h" />
     <ClInclude Include="Stroustruap_libs\Point.h" />
