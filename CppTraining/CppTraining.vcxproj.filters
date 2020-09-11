@@ -277,6 +277,18 @@
     <Filter Include="Ch19\Task1z">
       <UniqueIdentifier>{d0c5695a-978a-4cf8-b6aa-878d333dab00}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Ch19\Task1">
+      <UniqueIdentifier>{9e33ab51-8b85-41cf-8542-80892b99896f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ch19\Task2">
+      <UniqueIdentifier>{c1c45ea2-14d2-4633-ac2a-19624446025c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ch19\Task3">
+      <UniqueIdentifier>{ea5a5324-881b-401a-a799-c9b687e4003a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ch19\Task5-7">
+      <UniqueIdentifier>{eb7d4650-46eb-45e8-86c1-018c3a3fc01e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Stroustruap_libs\Graph.cpp">
@@ -521,6 +533,18 @@
     </ClCompile>
     <ClCompile Include="Ch19\Task1z\ex_1z_19.cpp">
       <Filter>Ch19\Task1z</Filter>
+    </ClCompile>
+    <ClCompile Include="Ch19\Task1\ex_1_19.cpp">
+      <Filter>Ch19\Task1</Filter>
+    </ClCompile>
+    <ClCompile Include="Ch19\Task2\ex_2_19.cpp">
+      <Filter>Ch19\Task2</Filter>
+    </ClCompile>
+    <ClCompile Include="Ch19\Task3\ex_3_19.cpp">
+      <Filter>Ch19\Task3</Filter>
+    </ClCompile>
+    <ClCompile Include="Ch19\Task5-7\ex_5_7_19.cpp">
+      <Filter>Ch19\Task5-7</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -874,6 +898,18 @@
     </ClInclude>
     <ClInclude Include="Ch19\Task1z\ex_1z_19.h">
       <Filter>Ch19\Task1z</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch19\Task1\ex_1_19.h">
+      <Filter>Ch19\Task1</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch19\Task2\ex_2_19.h">
+      <Filter>Ch19\Task2</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch19\Task3\ex_3_19.h">
+      <Filter>Ch19\Task3</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch19\Task5-7\ex_5_7_19.h">
+      <Filter>Ch19\Task5-7</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
