@@ -14,12 +14,12 @@ public:
 		counter = 0;
 	}
 
-	my_unique_ptr(my_unique_ptr& obj) {
+	my_unique_ptr(const my_unique_ptr& obj) {
 		pointer = obj.ptr();
 		counter++;
 	}
 
-	my_unique_ptr operator=(my_unique_ptr& obj) {
+	my_unique_ptr operator=(const my_unique_ptr& obj) {
 		pointer = obj.ptr();
 		counter++;
 		return *this;
@@ -42,7 +42,7 @@ public:
 		return _pointer;
 	}
 
-	T* ptr() {
+	T* ptr() const {
 		return pointer;
 	}
 
