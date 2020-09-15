@@ -104,4 +104,10 @@ void ex_8_19() {
 	my_vector<char> obj1;
 	obj1 = obj;
 	cout << obj1[0] << endl;
+
+	//+16 ex
+	my_vector<my_vector<int>> test1;
+	my_vector<int*> test2;
+	cout << sizeof(test1) << endl;
+	cout << sizeof(test2) << endl;
 }
