@@ -295,6 +295,12 @@
     <Filter Include="Ch19\Task13">
       <UniqueIdentifier>{64e000dd-1f53-4e6a-89bc-617ff635e2fd}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Ch19\Task8">
+      <UniqueIdentifier>{3b40e658-1c27-4ad3-b4fc-6d563b9de6da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ch19\Task16">
+      <UniqueIdentifier>{4388d40a-e367-4b13-9bec-c39d66112a6a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Stroustruap_libs\Graph.cpp">
@@ -557,6 +563,12 @@
     </ClCompile>
     <ClCompile Include="Ch19\Task13\ex_13_19.cpp">
       <Filter>Ch19\Task13</Filter>
+    </ClCompile>
+    <ClCompile Include="Ch19\Task8\ex_8_19.cpp">
+      <Filter>Ch19\Task8</Filter>
+    </ClCompile>
+    <ClCompile Include="Ch19\Task16\ex_16_19.cpp">
+      <Filter>Ch19\Task16</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -928,6 +940,12 @@
     </ClInclude>
     <ClInclude Include="Ch19\Task13\ex_13_19.h">
       <Filter>Ch19\Task13</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch19\Task8\ex_8_19.h">
+      <Filter>Ch19\Task8</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch19\Task16\ex_16_19.h">
+      <Filter>Ch19\Task16</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
