@@ -7,14 +7,17 @@ private:
 	T key;
 	U value;
 public:
-	Pair(T _key, U _value) : key{ _key }, value{ _value } {}
+	Pair(T _key, U _value) : key{ std::move(_key) }, value{ std::move(_value) } {}
+
 	void set(T _key, U _value) {
-		key = _key;
-		value = _value;
+		key = std::move(_key);
+		value = std::move(_value);
 	}
+
 	T get_key() {
 		return key;
 	}
+
 	U get_value() {
 		return value;
 	}

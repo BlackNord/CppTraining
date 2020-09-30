@@ -6,7 +6,7 @@ class S {
 private:
 	T val; 
 public:
-	S(T _val) : val{ _val } {}
+	S(T _val) : val{ std::move(_val) } {}
 	S() {}
 	T get();
 	T get() const;
@@ -27,7 +27,7 @@ public:
 
 template<typename T>
 void S<T>::set(T _val) {
-	val = _val;
+	val = std::move(_val);
 }
 
 template<typename T>

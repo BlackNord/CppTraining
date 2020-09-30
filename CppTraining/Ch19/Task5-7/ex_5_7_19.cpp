@@ -7,7 +7,7 @@ class Number {
 private:
 	T value;
 
-	bool chec_type(T _value) {
+	constexpr bool chec_type(T _value) {
 		if (typeid(_value) == typeid(int) or typeid(_value) == typeid(float)
 			or typeid(_value) == typeid(double) or typeid(_value) == typeid(short)) {
 			return true;
@@ -23,10 +23,6 @@ public:
 	}
 
 	Number() : value{ 0 } {}
-
-	T get() {
-		return value;
-	}
 
 	T get() const{
 		return value;

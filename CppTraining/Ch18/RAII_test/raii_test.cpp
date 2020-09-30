@@ -5,7 +5,11 @@ class Reader {
 public:
     Reader() {
         in1.open("F:\\Programms\\Visual Studio 2019\\Projects\\CppTraining\\CppTraining\\Ch18\\RAII_test\\1.txt");
-        in0.open("F:\\Programms\\Visual Studio 2019\\Projects\\CppTraining\\CppTraining\\Ch18\\RAII_test\\0.txt");
+        in0.open("F:\\Programms\\Visual Studio 2019\\Projects\\CppTraining\\CppTraining\\Ch18\\RAII_test\\02.txt");
+
+        if (!in0.is_open()) {
+            throw runtime_error("0");
+        }
     }
 
     void testing() {
@@ -59,7 +63,7 @@ void raii_test() {
     try {
         Reader obj;
         // Reader1 obj;
-        obj.testing();
+        // obj.testing();
     }
     catch (const exception& ex) {
         cout << "Error: " << ex.what() << endl;

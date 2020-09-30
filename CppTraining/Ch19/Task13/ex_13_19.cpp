@@ -22,12 +22,6 @@ public:
 	string get_d() const {
 		return str_d;
 	}
-	string get_c() {
-		return str_c;
-	}
-	string get_d() {
-		return str_d;
-	}
 };
 
 void ex_13_19() {
