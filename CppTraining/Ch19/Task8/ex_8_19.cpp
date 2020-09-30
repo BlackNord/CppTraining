@@ -15,10 +15,12 @@ public:
 			free(i);
 		}
 	}
-	void construct(T* p, const T& v) {
-		T* temp = (T*)malloc(sizeof(T));
+	void construct(T* p, const T& v) {		// создание типа T со значением v по адресу p
+		new(p) T(v);
+
+		/*T* temp = (T*)malloc(sizeof(T));	// mistakes
 		*temp = v;
-		memmove(p, temp, sizeof(T));
+		memmove(p, temp, sizeof(T));*/
 	}
 	void destroy(T* p) {
 		free(p);
