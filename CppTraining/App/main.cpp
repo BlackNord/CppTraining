@@ -16,9 +16,9 @@ int main() {
 		// ex_2_19();
 		// ex_3_19();
 		// ex_5_7_19();
-		// ex_10_19();
+		ex_10_19();
 		// ex_13_19();
-		ex_8_19();			// need fix
+		// ex_8_19();			
 	}
 	catch (const exception & ex) {
 		cout << "Error: " << ex.what() << endl;

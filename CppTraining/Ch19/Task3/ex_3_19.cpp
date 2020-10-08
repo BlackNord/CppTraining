@@ -14,11 +14,11 @@ public:
 		value = std::move(_value);
 	}
 
-	T get_key() {
+	T get_key() const {
 		return key;
 	}
 
-	U get_value() {
+	U get_value() const {
 		return value;
 	}
 };

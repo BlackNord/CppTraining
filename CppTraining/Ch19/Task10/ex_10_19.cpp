@@ -4,30 +4,29 @@
 //+11 ex
 
 template<typename T>
-class my_unique_ptr {
+class counted_ptr {
 private:
 	T* pointer;
-	int counter;
+	static int counter;
 public:
-	my_unique_ptr(T* _pointer) {
-		pointer = _pointer;
-		counter = 0;
+	counted_ptr(T* _pointer) {
+		pointer = new T(*_pointer);
 	}
 
-	my_unique_ptr(const my_unique_ptr& obj) {
+	counted_ptr(const counted_ptr& obj) {
 		pointer = obj.ptr();
 		counter++;
 	}
 
-	my_unique_ptr operator=(const my_unique_ptr& obj) {
+	counted_ptr operator=(const counted_ptr& obj) {
 		pointer = obj.ptr();
 		counter++;
 		return *this;
 	}
 
-	~my_unique_ptr() {
+	~counted_ptr() {
 		if (pointer != nullptr && counter == 0) {
-			delete[] pointer;
+			delete pointer;
 			cout << "Delete object\n";
 		}
 		else {
@@ -55,6 +54,9 @@ public:
 	}
 };
 
+template<typename T>
+int counted_ptr<T>::counter = 0;
+
 class Test {
 	int i;
 public:
@@ -65,10 +67,15 @@ public:
 	}
 };
 
-void ex_10_19() {
-	Test* ptr = new Test(5);
-	my_unique_ptr<Test> pointer(ptr);
+template<typename T>
+counted_ptr<T> testing() {
+	Test* ptr = new Test(5);				// create obj
+	counted_ptr<Test> pointer(ptr);			// create ptr with obj
 	pointer->NoInfo();
-	my_unique_ptr pointer2 = pointer;
-	// pointer.release();					// testing
+	counted_ptr test = pointer;				// create copy of obj
+	return test;							// deleting ptr
+}
+
+void ex_10_19() {
+	testing<Test>()->NoInfo();
 }
