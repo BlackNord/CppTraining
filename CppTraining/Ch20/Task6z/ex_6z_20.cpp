@@ -2,7 +2,7 @@
 #include "../../Stroustruap_libs/std_lib_facilities_4.h"
 
 template <typename Iter1, typename Iter2>
-Iter2 myCopy(Iter1 f1, Iter1 e1, Iter2 f2) {
+Iter2 copyTypes(Iter1 f1, Iter1 e1, Iter2 f2) {
 	if (f1 == e1) {
 		error("List is empty");
 	}
@@ -20,7 +20,7 @@ void ex_6z_20() {
 	vector<int> vec = { 1,3,2,4,5 };
 	int arr[5] = { 0 };
 
-	myCopy(vec.begin(), vec.end(), arr);
+	copyTypes(vec.begin(), vec.end(), arr);
 
 	for (const auto& k : arr) {
 		cout << k << ' ';

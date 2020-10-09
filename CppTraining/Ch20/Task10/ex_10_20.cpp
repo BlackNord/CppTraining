@@ -23,7 +23,9 @@ vector<string> split(string inputString, string delimeters) {
 	
 	while (getline(stringStream, word, '.'))
 	{
-		words.push_back(word);
+		if (!word.empty()) {
+			words.push_back(word);
+		}
 	}
 
 	return words;
@@ -36,4 +38,6 @@ void ex_10_20() {
 		cout << k << " ";
 	}
 	cout << endl;
+
+	cout << words.size() << endl;
 }
