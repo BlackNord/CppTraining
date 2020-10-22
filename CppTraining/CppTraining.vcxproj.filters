@@ -316,6 +316,15 @@
     <Filter Include="Ch20\Task2">
       <UniqueIdentifier>{8800a588-c555-42c5-890e-72b2041b1c07}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Ch20\Task11">
+      <UniqueIdentifier>{6f0b940a-284e-4e65-9889-ef5ab7698cdd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ch20\Task20">
+      <UniqueIdentifier>{eb2834d8-2e91-4d24-ba2c-36a1ec98f9cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ch20\Task5">
+      <UniqueIdentifier>{cd1ca03a-6244-4b27-abe2-2c521885933c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Stroustruap_libs\Graph.cpp">
@@ -596,6 +605,15 @@
     </ClCompile>
     <ClCompile Include="Ch20\Task2\ex_2_20.cpp">
       <Filter>Ch20\Task2</Filter>
+    </ClCompile>
+    <ClCompile Include="Ch20\Task11\ex_11_20.cpp">
+      <Filter>Ch20\Task11</Filter>
+    </ClCompile>
+    <ClCompile Include="Ch20\Task20\ex_20_20.cpp">
+      <Filter>Ch20\Task20</Filter>
+    </ClCompile>
+    <ClCompile Include="Ch20\Task5\ex_5_20.cpp">
+      <Filter>Ch20\Task5</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -985,6 +1003,18 @@
     </ClInclude>
     <ClInclude Include="Ch20\Task2\ex_2_20.h">
       <Filter>Ch20\Task2</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch20\Task11\ex_11_20.h">
+      <Filter>Ch20\Task11</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch20\Task20\ex_20_20.h">
+      <Filter>Ch20\Task20</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch20\Task5\ex_5_20.h">
+      <Filter>Ch20\Task5</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch20\Task5\MyVector.h">
+      <Filter>Ch20\Task5</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
