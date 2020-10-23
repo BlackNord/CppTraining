@@ -5,6 +5,7 @@
 #include "../Ch20/Task3/ex_3_20.h"
 #include "../Ch20/Task5/ex_5_20.h"
 #include "../Ch20/Task7/ex_7_20.h"
+#include "../Ch20/Task6-8-9/ex_6_8_9_20.h"
 #include "../Ch20/Task10/ex_10_20.h"
 #include "../Ch20/Task11/ex_11_20.h"
 #include "../Ch20/Task14/ex_14_20.h"
@@ -23,6 +24,7 @@ int main() {
 		// ex_20_20();
 		// ex_5_20();
 		// ex_14_20();
+		ex_6_8_9_20();
 	}
 	catch (const exception & ex) {
 		cout << "Error: " << ex.what() << endl;

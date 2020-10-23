@@ -250,6 +250,7 @@
     <ClCompile Include="Ch20\Task2\ex_2_20.cpp" />
     <ClCompile Include="Ch20\Task3\ex_3_20.cpp" />
     <ClCompile Include="Ch20\Task5\ex_5_20.cpp" />
+    <ClCompile Include="Ch20\Task6-8-9\ex_6_8_9_20.cpp" />
     <ClCompile Include="Ch20\Task6z\ex_6z_20.cpp" />
     <ClCompile Include="Ch20\Task7\ex_7_20.cpp" />
     <ClCompile Include="Stroustruap_libs\Graph.cpp" />
@@ -385,6 +386,7 @@
     <ClInclude Include="Ch20\Task3\ex_3_20.h" />
     <ClInclude Include="Ch20\Task5\ex_5_20.h" />
     <ClInclude Include="Ch20\Task5\MyVector.h" />
+    <ClInclude Include="Ch20\Task6-8-9\ex_6_8_9_20.h" />
     <ClInclude Include="Ch20\Task6z\ex_6z_20.h" />
     <ClInclude Include="Ch20\Task7\ex_7_20.h" />
     <ClInclude Include="Stroustruap_libs\Graph.h" />
