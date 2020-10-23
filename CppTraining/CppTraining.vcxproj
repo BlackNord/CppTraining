@@ -245,6 +245,7 @@
     <ClCompile Include="Ch19\Task8\ex_8_19.cpp" />
     <ClCompile Include="Ch20\Task10\ex_10_20.cpp" />
     <ClCompile Include="Ch20\Task11\ex_11_20.cpp" />
+    <ClCompile Include="Ch20\Task14\ex_14_20.cpp" />
     <ClCompile Include="Ch20\Task20\ex_20_20.cpp" />
     <ClCompile Include="Ch20\Task2\ex_2_20.cpp" />
     <ClCompile Include="Ch20\Task3\ex_3_20.cpp" />
@@ -377,6 +378,8 @@
     <ClInclude Include="Ch19\Task8\ex_8_19.h" />
     <ClInclude Include="Ch20\Task10\ex_10_20.h" />
     <ClInclude Include="Ch20\Task11\ex_11_20.h" />
+    <ClInclude Include="Ch20\Task14\ex_14_20.h" />
+    <ClInclude Include="Ch20\Task14\MyList.h" />
     <ClInclude Include="Ch20\Task20\ex_20_20.h" />
     <ClInclude Include="Ch20\Task2\ex_2_20.h" />
     <ClInclude Include="Ch20\Task3\ex_3_20.h" />
