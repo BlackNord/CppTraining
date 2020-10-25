@@ -3,7 +3,7 @@
 
 // Напишите операцию "найти и заменить" для класса Docwnent, используя информацию из раздела 20.6.2.
 
-using Line = vector<char>;
+using Line = vector<char>; 
 
 class Text_iterator {
     list<Line>::iterator ln_;
