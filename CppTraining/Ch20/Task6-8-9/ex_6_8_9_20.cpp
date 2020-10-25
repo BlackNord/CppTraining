@@ -3,10 +3,6 @@
 
 // Напишите операцию "найти и заменить" для класса Docwnent, используя информацию из раздела 20.6.2.
 
-// Напишите программу, подсчитывающую количество слов в объекте класса Document.Предусмотрите две версии : одну, в которой слово - это "последовательность символов, разделенных пробельными
-// символами", и вторую, в которой слово - это "неразрывная после824 Глава 20 • Контейнеры и итераторы
-// довательность алфавитных символов". Например, при первом определении выражения alpha . numeric и as12b это слова, а при втором каждое из них рассматривается как два слова.
-
 using Line = vector<char>;
 
 class Text_iterator {
@@ -128,13 +124,50 @@ void advance(Iter& pos, int n) {
     }
 }
 
+int countWordsF(Document& doc) {
+    bool param{ false };
+    int counter{ 0 };
+
+    for (const auto& k : doc) {
+        if (!param and isalpha(k)) {
+            param = true;
+        }
+        else if (param and isspace(k)) {
+            param = false;
+            ++counter;
+        }
+    }
+
+    return counter;
+}
+
+int countWordsS(Document& doc) {
+    bool param{ false };
+    int counter{ 0 };
+
+    for (const auto& k : doc) {
+        if (!param and isalpha(k)) {
+            param = true;
+        }
+        else if (param and !isalpha(k)) {
+            param = false;
+            ++counter;
+        }
+    }
+
+    return counter;
+}
+
 void ex_6_8_9_20() {
     Document myDoc;
 
-    istringstream is{ "The test1\nThe test2\nThe test3\nThe test4\n" };
+    istringstream is{ "The te.st1\nThe te1st2\nThe test3\nThe test4\n" };
     is >> myDoc;
 
     printDoc(myDoc);
 
     cout << countSymbols(myDoc) << endl;
+
+    cout << countWordsF(myDoc) << endl;
+    cout << countWordsS(myDoc) << endl;
 }
