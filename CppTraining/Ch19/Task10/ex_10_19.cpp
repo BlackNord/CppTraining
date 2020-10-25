@@ -36,59 +36,77 @@ public:
 	}
 };
 
-//template<typename T>
-//class counted_ptr {
-//private:
-//	T* pointer;
-//	static int counter;
-//public:
-//	counted_ptr(T* _pointer) {
-//		pointer = new T(*_pointer);
-//	}
-//
-//	counted_ptr(const counted_ptr& obj) {
-//		pointer = obj.ptr();
-//		counter++;
-//	}
-//
-//	counted_ptr operator=(const counted_ptr& obj) {
-//		pointer = obj.ptr();
-//		counter++;
-//		return *this;
-//	}
-//
-//	~counted_ptr() {
-//		if (pointer != nullptr && counter == 0) {
-//			delete pointer;
-//			cout << "Delete object\n";
-//		}
-//		else {
-//			cout << "Delete copy\n";
-//			counter--;
-//		}
-//	}
-//
-//	T* release() {
-//		T* _pointer = pointer;
-//		pointer = nullptr;
-//		return _pointer;
-//	}
-//
-//	T* ptr() const {
-//		return pointer;
-//	}
-//
-//	T* operator ->() {
-//		return pointer;
-//	}
-//
-//	T& operator *() {
-//		return *pointer;
-//	}
-//};
+template<typename T>
+class MyCountedPtr {
+private:
+	T* pointer_;
+	int* counter_;
+public:
+	MyCountedPtr(T* _pointer) {
+		pointer_ = new T(*_pointer);
+		counter_ = new int();
+		*counter_ = 1;
+	}
 
-//template<typename T>
-//int counted_ptr<T>::counter = 0;
+	MyCountedPtr(const MyCountedPtr& obj) {
+		pointer_ = obj.ptr();
+		counter_ = obj.counter_;
+		++(*counter_);
+	}
+
+	MyCountedPtr operator=(const MyCountedPtr& obj) {
+		if (*counter_ > 0) {
+			if (pointer_ != nullptr && *counter_ == 1) {
+				delete pointer_;
+				delete counter_;
+				pointer_ = nullptr;
+				counter_ = nullptr;
+				cout << "Delete object\n";
+			}
+			else {
+				--(*counter_);
+				cout << "Delete copy\n";
+			}
+		}
+
+		if (this != &obj) {
+			pointer_ = obj.ptr();
+			counter_ = obj.counter_;
+			++(*counter_);
+		}
+
+		return *this;
+	}
+
+	MyCountedPtr() {}
+
+	~MyCountedPtr() {
+		if (pointer_ != nullptr && *counter_ == 1) {
+			delete pointer_;
+			delete counter_;
+			pointer_ = nullptr;
+			counter_ = nullptr;
+			cout << "Delete object\n";
+		}
+		else {
+			--(*counter_);
+			cout << "Delete copy\n";
+		}
+	}
+
+	T* ptr() const {
+		return pointer_;
+	}
+
+	T* operator ->() {
+		return pointer_;
+	}
+
+	T& operator *() {
+		return *pointer_;
+	}
+};
+
 
 class Test {
 	int i;
@@ -115,6 +133,21 @@ void testing_unique() {
 	delete p;
 }
 
+void testing_counted() {
+	Test* ptr = new Test(5);
+
+	MyCountedPtr<Test>* pointer = new MyCountedPtr<Test>(ptr);
+
+	MyCountedPtr<Test>* pointer2 = new MyCountedPtr<Test>(*pointer);
+	MyCountedPtr<Test> pointer3(*pointer2);
+
+	delete pointer2;
+	delete pointer;
+
+	pointer3->NoInfo();
+}
+
 void ex_10_19() {
-	testing_unique();
+	//testing_unique();
+	testing_counted();
 }
