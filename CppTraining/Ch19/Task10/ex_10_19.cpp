@@ -18,6 +18,10 @@ public:
 		cout << "Destructor working\n";
 	}
 
+	MyUniquePtr(MyUniquePtr&& ptr) : pointer_(ptr.pointer_) {
+		ptr.pointer_ = nullptr;
+	}
+
 	MyUniquePtr(const MyUniquePtr&) = delete;
 	void operator=(const MyUniquePtr&) = delete;
 
@@ -34,6 +38,10 @@ public:
 	T& operator *() {
 		return *pointer_;
 	}
+
+	T& operator *() const {
+		return *pointer_;
+	}
 };
 
 template<typename T>
@@ -41,6 +49,21 @@ class MyCountedPtr {
 private:
 	T* pointer_;
 	int* counter_;
+
+	void cleanup() {
+		if (pointer_ != nullptr && *counter_ == 1) {
+			delete pointer_;
+			delete counter_;
+			pointer_ = nullptr;
+			counter_ = nullptr;
+			cout << "Delete object\n";
+		}
+		else {
+			--(*counter_);
+			cout << "Delete copy\n";
+		}
+	}
+
 public:
 	MyCountedPtr(T* _pointer) {
 		pointer_ = new T(*_pointer);
@@ -56,17 +79,7 @@ public:
 
 	MyCountedPtr operator=(const MyCountedPtr& obj) {
 		if (*counter_ > 0) {
-			if (pointer_ != nullptr && *counter_ == 1) {
-				delete pointer_;
-				delete counter_;
-				pointer_ = nullptr;
-				counter_ = nullptr;
-				cout << "Delete object\n";
-			}
-			else {
-				--(*counter_);
-				cout << "Delete copy\n";
-			}
+			cleanup();
 		}
 
 		if (this != &obj) {
@@ -81,17 +94,7 @@ public:
 	MyCountedPtr() {}
 
 	~MyCountedPtr() {
-		if (pointer_ != nullptr && *counter_ == 1) {
-			delete pointer_;
-			delete counter_;
-			pointer_ = nullptr;
-			counter_ = nullptr;
-			cout << "Delete object\n";
-		}
-		else {
-			--(*counter_);
-			cout << "Delete copy\n";
-		}
+		cleanup();
 	}
 
 	T* ptr() const {
@@ -103,6 +106,10 @@ public:
 	}
 
 	T& operator *() {
+		return *pointer_;
+	}
+
+	T& operator *() const {
 		return *pointer_;
 	}
 };

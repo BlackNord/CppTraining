@@ -1,8 +1,6 @@
 #include "ex_6_8_9_20.h"
 #include "../../Stroustruap_libs/std_lib_facilities_4.h"
 
-// Напишите операцию "найти и заменить" для класса Docwnent, используя информацию из раздела 20.6.2.
-
 using Line = vector<char>; 
 
 class Text_iterator {
@@ -66,17 +64,20 @@ struct Document {
 
 istream& operator>>(istream& is, Document& doc) {
     for (char ch; is.get(ch); ) {
-        if (ch == '|') 
-            break;           
+        if (ch == '|') {
+            break;
+        }
 
         doc.line_.back().push_back(ch);
 
-        if (ch == '\n')
+        if (ch == '\n') {
             doc.line_.push_back(Line{});
+        }
     }
 
-    if (doc.line_.back().size()) 
+    if (doc.line_.back().size()) {
         doc.line_.push_back(Line{});
+    }
 
     return is;
 }
@@ -89,8 +90,9 @@ void printDoc(Document& doc) {
 }
 
 void eraseLine(Document& doc, int n) {
-    if (n < 0 || doc.line_.size() - 1 <= n)
+    if (n < 0 || doc.line_.size() - 1 <= n) {
         return;
+    }
 
     auto p = doc.line_.begin();
 
@@ -121,6 +123,33 @@ void advance(Iter& pos, int n) {
     while (n < 0) { 
         --pos; 
         ++n; 
+    }
+}
+
+bool match(Text_iterator p, Text_iterator last, const string& str) {
+    for (auto q = str.begin(); q != str.end(); ++q) {
+        if (*q != *p || p == last) {
+            return false;
+        }
+        ++p;
+    }
+    return true;
+}
+
+Text_iterator findTxt(Text_iterator first, Text_iterator last, const string& str) {
+    if (str.size() == 0) {
+        return last;
+    }
+    char firstChar = str[0];
+
+    while (true) {
+        auto ptr = find(first, last, firstChar);
+
+        if (ptr == last || match(ptr, last, str)) {
+            return ptr;
+        }
+
+        first = ++ptr;
     }
 }
 
