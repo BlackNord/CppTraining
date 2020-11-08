@@ -32,7 +32,7 @@ void ex_2_20() {
 
 	double* jackHigh = findHigh(jackData, jackData + jackCount);
 	vector<double>& vec = *jillData;
-	double* jillHigh = findHigh(&vec[0], &vec[0] + vec.size());
+	double* jillHigh = findHigh(vec.data(), vec.data() + vec.size());
 
 	cout << *jackHigh << " " << *jillHigh << endl;
 

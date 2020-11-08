@@ -11,7 +11,7 @@
 #include "../Ch20/Task14/ex_14_20.h"
 #include "../Ch20/Task20/ex_20_20.h"
 
-// 6, [12-13, 15, 16, 17, 18, 19] 
+// [12-13, 15, 16, 17, 18, 19] 
 
 int main() {
 	try {
@@ -24,7 +24,7 @@ int main() {
 		// ex_20_20();
 		// ex_5_20();
 		// ex_14_20();
-		ex_6_8_9_20();
+		// ex_6_8_9_20();
 	}
 	catch (const exception & ex) {
 		cout << "Error: " << ex.what() << endl;

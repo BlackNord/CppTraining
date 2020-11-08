@@ -18,7 +18,8 @@ public:
 		cout << "Destructor working\n";
 	}
 
-	MyUniquePtr(MyUniquePtr&& ptr) : pointer_(ptr.pointer_) {
+	MyUniquePtr(MyUniquePtr&& ptr) {
+		pointer_ = ptr.pointer_;
 		ptr.pointer_ = nullptr;
 	}
 
@@ -39,7 +40,7 @@ public:
 		return *pointer_;
 	}
 
-	T& operator *() const {
+	const T& operator *() const {
 		return *pointer_;
 	}
 };

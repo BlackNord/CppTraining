@@ -153,6 +153,29 @@ Text_iterator findTxt(Text_iterator first, Text_iterator last, const string& str
     }
 }
 
+void findReplace(Text_iterator first, Text_iterator last, const string& findStr, const string& replaceStr) {
+    Text_iterator position = findTxt(first, last, findStr);
+
+    if (position == last)
+        return;
+
+    Line& line = position.getLine();
+
+    const int diff = replaceStr.size() - findStr.size();
+    if (diff > 0 && line.size() + diff > line.capacity()) {  // checking of capacity for replacement
+        line.reserve(line.size() + diff);                   // getting memory
+    }
+
+    position = findTxt(first, last, findStr);
+    auto q = position.getPos();
+
+    q = line.erase(q, q + findStr.size());
+
+    for (auto k = replaceStr.crbegin(); k != replaceStr.crend(); ++k) {
+        q = line.insert(q, *k);
+    }
+}
+
 int countWordsF(Document& doc) {
     bool param{ false };
     int counter{ 0 };
@@ -195,8 +218,12 @@ void ex_6_8_9_20() {
 
     printDoc(myDoc);
 
-    cout << countSymbols(myDoc) << endl;
+    cout << "Symbols: " << countSymbols(myDoc) << endl;
 
-    cout << countWordsF(myDoc) << endl;
-    cout << countWordsS(myDoc) << endl;
+    cout << "Words F: " << countWordsF(myDoc) << endl;
+    cout << "Words S: " << countWordsS(myDoc) << endl;
+
+    findReplace(myDoc.begin(), myDoc.end(), "t4", "AEO");
+
+    printDoc(myDoc);
 }
