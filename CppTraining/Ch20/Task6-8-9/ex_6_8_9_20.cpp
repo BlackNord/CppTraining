@@ -8,7 +8,7 @@ class Text_iterator {
     Line::iterator pos_;
 
 public:
-    Text_iterator(list<Line>::iterator ln, Line::iterator pos) : ln_{ ln }, pos_{ pos } { }
+    Text_iterator(list<Line>::iterator ln, Line::iterator pos) : ln_{ std::move(ln) }, pos_{ std::move(pos) } { }
 
     char& operator *() {
         return *pos_;
@@ -162,8 +162,8 @@ void findReplace(Text_iterator first, Text_iterator last, const string& findStr,
     Line& line = position.getLine();
 
     const int diff = replaceStr.size() - findStr.size();
-    if (diff > 0 && line.size() + diff > line.capacity()) {  // checking of capacity for replacement
-        line.reserve(line.size() + diff);                   // getting memory
+    if (diff > 0 && line.size() + diff > line.capacity()) {     // checking of capacity for replacement
+        line.reserve(line.size() + diff);                       // getting memory
     }
 
     position = findTxt(first, last, findStr);

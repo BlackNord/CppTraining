@@ -29,9 +29,9 @@ protected:
 		}
 
 		Node(const T& data) {
-			Node* next = nullptr;
+			Node* nextp = nullptr;
 			this->data = data;
-			this->next = next;
+			this->next = nextp;
 		}
 
 		T data;
@@ -53,6 +53,29 @@ public:
 		head = nullptr;
 		size = 0;
 		maxSize = _maxSize;
+	}
+
+	MyList(MyList&& temp) {
+		head = temp.head;
+		size = temp.size;
+		maxSize = temp.maxSize;
+
+		temp.head = nullptr;
+		temp.~MyList();
+	}
+
+	MyList& operator=(MyList&& temp) {
+		if (&temp == this)
+			return *this;
+
+		head = temp.head;
+		size = temp.size;
+		maxSize = temp.maxSize;
+
+		temp.head = nullptr;
+		temp.~MyList();
+
+		return *this;
 	}
 
 	MyList(const MyList& other) {									
@@ -79,7 +102,6 @@ public:
 		}
 
 		delete un;
-		delete temp;
 	}
 
 	int getSize() const {
@@ -203,16 +225,8 @@ public:
 
 	MyList<T>& operator =(const MyList<T>& other) {									
 		Node* un = other.head;
-		Node* ptr = head;
-		Node* temp = nullptr;
 
-		while (ptr) {																
-			temp = ptr->next;
-			delete ptr;
-			ptr = temp;
-		}
-
-		this->head = nullptr;
+		this->~MyList();
 
 		while (un) {
 			this->pushEnd(un->data);

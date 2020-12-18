@@ -10,19 +10,15 @@ public:
 	}
 
 	void deallocate(T* p, int n) {
-		T* i = p;
-
-		for (int k = 0; k < n; ++i, ++k) {
-			free(i);
-		}
+		free(p);
 	}
 
-	void construct(T* p, const T& v) {		// создание типа T со значением v по адресу p
+	void construct(T* p, const T& v) {		// create type T with value v on adress p
 		new(p) T(v);
 	}
 
 	void destroy(T* p) {
-		free(p);
+		delete(p);
 	}
 };
 

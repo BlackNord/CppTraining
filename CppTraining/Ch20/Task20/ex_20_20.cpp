@@ -21,6 +21,15 @@ void printList(const list<T>& list) {
     cout << endl;
 }
 
+template<typename T>
+void printLV(T begin, T end) {
+    while (begin != end) {
+        cout << *begin << " ";
+        ++begin;
+    }
+    cout << endl;
+}
+
 int randD(int down, int up = 0) {                    // random int of some diapazon
     std::random_device rd;
     std::mt19937 mt(rd());
@@ -46,6 +55,14 @@ typename std::list<T>::iterator insertSortedL(list<T>& list, T const& item) {
     );
 }
 
+template<typename T>
+typename std::list<T>::iterator insertSorted(list<T>& list, T const& item) {
+    return list.insert(
+        std::upper_bound(list.begin(), list.end(), item),
+        item
+    );
+}
+
 void ex_20_20() {
     int n{ 0 };
     vector<int> myVec{};
@@ -66,8 +83,10 @@ void ex_20_20() {
     }
     auto endTimeV = chrono::system_clock::now();
 
-    printVec<int>(myVec);
-    printList<int>(myList);
+    //printVec<int>(myVec);
+    //printList<int>(myList);
+    printLV(myVec.begin(), myVec.end());
+    printLV(myList.begin(), myList.end());
 
     cout << "List: " << chrono::duration_cast<chrono::nanoseconds>(endTimeL - beginTimeL).count() << " ns" << endl;
     cout << "Vector: " << chrono::duration_cast<chrono::nanoseconds>(endTimeV - beginTimeV).count() << " ns" << endl;
