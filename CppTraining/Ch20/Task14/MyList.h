@@ -29,9 +29,8 @@ protected:
 		}
 
 		Node(const T& data) {
-			Node* nextp = nullptr;
 			this->data = data;
-			this->next = nextp;
+			this->next = nullptr;
 		}
 
 		T data;
@@ -61,7 +60,6 @@ public:
 		maxSize = temp.maxSize;
 
 		temp.head = nullptr;
-		temp.~MyList();
 	}
 
 	MyList& operator=(MyList&& temp) {
@@ -73,7 +71,8 @@ public:
 		maxSize = temp.maxSize;
 
 		temp.head = nullptr;
-		temp.~MyList();
+		temp.size = 0;
+		temp.maxSize = 0;
 
 		return *this;
 	}

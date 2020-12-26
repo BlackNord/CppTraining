@@ -325,9 +325,6 @@
     <Filter Include="Ch20\Task5">
       <UniqueIdentifier>{cd1ca03a-6244-4b27-abe2-2c521885933c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Ch20\Task14">
-      <UniqueIdentifier>{63f339d0-e36d-4772-9be8-fe3b910d1a8a}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Ch20\Task6-8-9">
       <UniqueIdentifier>{14d7c612-cf9c-4058-ac96-2d80fc0fbad9}</UniqueIdentifier>
     </Filter>
@@ -336,6 +333,9 @@
     </Filter>
     <Filter Include="Ch20\Task16">
       <UniqueIdentifier>{2905265f-0ce1-4476-90f5-196b9777da54}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ch20\Task14">
+      <UniqueIdentifier>{63f339d0-e36d-4772-9be8-fe3b910d1a8a}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

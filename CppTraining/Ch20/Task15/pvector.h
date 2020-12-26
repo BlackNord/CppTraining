@@ -38,7 +38,7 @@ private:
 public:
 	pvector() : sz{ 0 }, elem{ nullptr }, space{ 0 } {}
 
-	explicit pvector(int s) : sz{ s }, elem{ new T[s] }, space{ s } {
+	explicit pvector(int s) : sz{ s }, elem{ alloc.allocate(T[s]) }, space{ s } {
 		for (int i{ 0 }; i < sz; ++i) {
 			elem[i] = 0;
 		}
@@ -70,11 +70,13 @@ public:
 	}
 
 	~pvector() { 
-		for (int i{ 0 }; i < sz; ++i) {
+		/*for (int i{ 0 }; i < sz; ++i) {
 			delete elem[i];
 		}
 
-		delete[] elem; 
+		delete[] elem;*/
+
+		alloc.destroy(elem);
 	}
 
 	T& operator[](int n) { 

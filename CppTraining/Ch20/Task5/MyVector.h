@@ -32,10 +32,33 @@ private:
 public:
 	MyVector() : sz{ 0 }, elem{ nullptr }, space{ 0 } { }
 
-	explicit MyVector(int s) : sz{ s }, elem{ new T[s] }, space{ s } {
+	explicit MyVector(int s) : sz{ s }, elem{ alloc.allocate(T[s]) }, space{ s } {
 		for (int i{ 0 }; i < sz; ++i) {
 			elem[i] = 0;
 		}
+	}
+
+	MyVector(MyVector&& temp) {
+		sz = temp.sz;
+		elem = temp.elem;
+		space = temp.space;
+		alloc = temp.alloc;
+		
+		temp.elem = nullptr;
+	}
+
+	MyVector& operator=(MyVector&& temp) {
+		if (&temp == this)
+			return *this;
+
+		sz = temp.sz;
+		elem = temp.elem;
+		space = temp.space;
+		alloc = temp.alloc;
+
+		temp.elem = nullptr;
+
+		return *this;
 	}
 
 	MyVector& operator=(const MyVector& a) {
@@ -64,7 +87,7 @@ public:
 	}
 
 	~MyVector() { 
-		delete[] elem; 
+		alloc.destroy(elem);
 	}
 
 	T& operator[](int n) {
