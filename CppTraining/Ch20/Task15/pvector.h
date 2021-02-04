@@ -70,13 +70,11 @@ public:
 	}
 
 	~pvector() { 
-		/*for (int i{ 0 }; i < sz; ++i) {
+		for (int i{ 0 }; i < sz; ++i) {
 			delete elem[i];
 		}
 
-		delete[] elem;*/
-
-		alloc.destroy(elem);
+		delete[] elem;
 	}
 
 	T& operator[](int n) { 

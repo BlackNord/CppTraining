@@ -60,6 +60,16 @@ struct Document {
         --last;                         
         return Text_iterator(last, last->end());
     }
+
+    /*Text_iterator begin() const {
+        return Text_iterator(line_.begin(), line_.begin()->begin());
+    }
+
+    Text_iterator end() const {
+        auto last = line_.end();
+        --last;
+        return Text_iterator(last, last->end());
+    }*/
 };
 
 istream& operator>>(istream& is, Document& doc) {
@@ -82,7 +92,7 @@ istream& operator>>(istream& is, Document& doc) {
     return is;
 }
 
-void printDoc(Document& doc) {
+void printDoc(Document& doc) {  // const 
     for (const auto& k : doc) {
         cout << k << " ";
     }
@@ -101,7 +111,7 @@ void eraseLine(Document& doc, int n) {
     doc.line_.erase(p);
 }
 
-int countSymbols(Document& doc) {
+int countSymbols(Document& doc) { // const 
     int counter{ 0 };
 
     for (const auto& k : doc) {
@@ -176,7 +186,7 @@ void findReplace(Text_iterator first, Text_iterator last, const string& findStr,
     }
 }
 
-int countWordsF(Document& doc) {
+int countWordsF(Document& doc) {    // const 
     bool param{ false };
     int counter{ 0 };
 
@@ -193,7 +203,7 @@ int countWordsF(Document& doc) {
     return counter;
 }
 
-int countWordsS(Document& doc) {
+int countWordsS(Document& doc) {    // const 
     bool param{ false };
     int counter{ 0 };
 

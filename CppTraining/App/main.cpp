@@ -13,8 +13,6 @@
 #include "../Ch20/Task16/ex_16_20.h"
 #include "../Ch20/Task20/ex_20_20.h"
 
-// [12-13, 17, 18, 19] 
-
 int main() {
 	try {
 		// ex_6z_20();
@@ -27,7 +25,7 @@ int main() {
 		// ex_5_20();
 		// ex_14_20();
 		// ex_6_8_9_20();
-		// ex_15_20();
+		ex_15_20();
 		// ex_16_20();
 	}
 	catch (const exception & ex) {

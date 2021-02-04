@@ -51,12 +51,7 @@ public:
 		if (&temp == this)
 			return *this;
 
-		sz = temp.sz;
-		elem = temp.elem;
-		space = temp.space;
-		alloc = temp.alloc;
-
-		temp.elem = nullptr;
+		*this = std::move(temp);
 
 		return *this;
 	}

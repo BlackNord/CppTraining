@@ -66,13 +66,7 @@ public:
 		if (&temp == this)
 			return *this;
 
-		head = temp.head;
-		size = temp.size;
-		maxSize = temp.maxSize;
-
-		temp.head = nullptr;
-		temp.size = 0;
-		temp.maxSize = 0;
+		*this = std::move(temp);
 
 		return *this;
 	}

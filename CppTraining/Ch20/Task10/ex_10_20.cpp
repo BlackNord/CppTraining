@@ -31,7 +31,7 @@
 //	return words;
 //}
 
-vector<string> split(const string& str) {
+/*vector<string> split(const string& str) {
 	vector<string> result;
 	stringstream x;
 	string buf;
@@ -42,10 +42,22 @@ vector<string> split(const string& str) {
 	}
 
 	return result;
+}*/
+
+vector<string> split(std::stringstream& str, char separator) {
+	std::vector<string> result;
+	std::string line;
+
+	while (getline(str, line, separator)) {
+		result.push_back(line);
+	}
+
+	return result;
 }
 
 void ex_10_20() {
-	vector<string> words = split("turie,tr   !trjek,,/ tr");
+	std::stringstream stream("turie,tr,trjek,tr");
+	std::vector<std::string> words = split(stream, ',');
 
 	for (const auto& k : words) {
 		cout << k << " ";
