@@ -150,6 +150,7 @@ Text_iterator findTxt(Text_iterator first, Text_iterator last, const string& str
     if (str.size() == 0) {
         return last;
     }
+
     char firstChar = str[0];
 
     while (true) {
