@@ -51,7 +51,9 @@ public:
 		if (&temp == this)
 			return *this;
 
-		*this = std::move(temp);
+		auto buf = elem;
+		elem = temp.elem;
+		temp.elem = buf;
 
 		return *this;
 	}
