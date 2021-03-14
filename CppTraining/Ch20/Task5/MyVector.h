@@ -55,6 +55,9 @@ public:
 		elem = temp.elem;
 		temp.elem = buf;
 
+		size = temp.size;
+		space = temp.space;
+
 		return *this;
 	}
 
