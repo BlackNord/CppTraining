@@ -66,7 +66,9 @@ public:
 		if (&temp == this)
 			return *this;
 
-		*this = std::move(temp);
+		std::swap(head, temp.head);
+		std::swap(size, temp.size);
+		std::swap(maxSize, temp.maxSize);
 
 		return *this;
 	}

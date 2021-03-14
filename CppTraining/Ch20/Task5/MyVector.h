@@ -51,12 +51,9 @@ public:
 		if (&temp == this)
 			return *this;
 
-		auto buf = elem;
-		elem = temp.elem;
-		temp.elem = buf;
-
-		size = temp.size;
-		space = temp.space;
+		std::swap(elem, temp.elem);
+		std::swap(size, temp.size);
+		std::swap(space, temp.space);
 
 		return *this;
 	}
